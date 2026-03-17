@@ -21,6 +21,7 @@
   font-family:'Quicksand',sans-serif;
 }
 body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicksand',sans-serif}
+
 .auth-screen{min-height:100vh;background:var(--dcarli-dark);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;position:relative;overflow:hidden}
 .auth-top-bar{position:absolute;top:0;left:0;right:0;height:4px;background:var(--dcarli)}
 .auth-circle-1{position:absolute;top:-80px;right:-80px;width:320px;height:320px;border-radius:50%;border:1px solid rgba(204,214,80,0.12)}
@@ -53,6 +54,28 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
 .auth-security span{font-size:11px;color:var(--text-hint);font-weight:500}
 .auth-footer{margin-top:1.5rem;text-align:center;position:relative;z-index:1}
 .auth-footer span{font-size:11px;color:rgba(204,214,80,0.45);font-weight:600;letter-spacing:.5px}
+
+.select-screen{min-height:100vh;background:var(--dcarli-dark);display:none;flex-direction:column;align-items:center;justify-content:center;padding:2rem;position:relative;overflow:hidden}
+.select-screen .auth-top-bar{position:absolute;top:0;left:0;right:0;height:4px;background:var(--dcarli)}
+.select-screen .auth-circle-1{position:absolute;top:-80px;right:-80px;width:320px;height:320px;border-radius:50%;border:1px solid rgba(204,214,80,0.12)}
+.select-screen .auth-circle-3{position:absolute;bottom:-100px;left:-100px;width:380px;height:380px;border-radius:50%;border:1px solid rgba(204,214,80,0.06)}
+.select-card{background:var(--surface);border-radius:16px;padding:2.5rem;width:100%;max-width:480px;position:relative;z-index:1}
+.select-header{text-align:center;margin-bottom:1.75rem}
+.select-logo-wrap{display:flex;justify-content:center;margin-bottom:1rem}
+.select-logo-img{max-height:44px;max-width:160px;object-fit:contain;display:none}
+.select-logo-icon{width:44px;height:44px;background:#f5f7d9;border-radius:10px;display:flex;align-items:center;justify-content:center}
+.select-title{font-size:16px;font-weight:700;color:var(--text);margin-bottom:4px}
+.select-sub{font-size:13px;color:var(--text-sec);font-weight:500}
+.select-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-bottom:1.25rem}
+.select-item{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;cursor:pointer;transition:all .2s;text-align:center}
+.select-item:hover{border-color:var(--dcarli);background:#f5f7d9}
+.select-item-label{font-size:11px;font-weight:700;color:var(--dcarli-text);text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px}
+.select-item-name{font-size:15px;font-weight:700;color:var(--text);margin-bottom:2px}
+.select-item-year{font-size:22px;font-weight:700;color:var(--blue);letter-spacing:-.5px}
+.select-item-status{font-size:11px;font-weight:600;padding:3px 10px;border-radius:99px;display:inline-block;margin-top:8px}
+.select-logout{width:100%;padding:8px;background:transparent;border:1px solid var(--border);border-radius:var(--radius);font-size:13px;font-weight:600;color:var(--text-sec);cursor:pointer;font-family:'Quicksand',sans-serif}
+.select-logout:hover{background:var(--gray-light)}
+
 .topbar{background:var(--surface);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:100;border-top:3px solid var(--dcarli)}
 .logo-wrap{display:flex;align-items:center;gap:12px}
 .logo-img{height:36px;width:auto;max-width:160px;object-fit:contain;display:none}
@@ -61,8 +84,12 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
 .logo-text{display:flex;flex-direction:column}
 .logo-name{font-size:14px;font-weight:700;color:var(--text);letter-spacing:-.3px}
 .logo-sub{font-size:11px;color:var(--text-sec);margin-top:1px;font-weight:500}
-.logout-btn{font-size:12px;font-weight:600;padding:5px 14px;border:1px solid var(--border);border-radius:var(--radius);background:transparent;color:var(--text-sec);cursor:pointer;font-family:'Quicksand',sans-serif;transition:all .15s}
+.topbar-right{display:flex;align-items:center;gap:10px}
+.back-btn{font-size:12px;font-weight:600;padding:5px 12px;border:1px solid var(--border);border-radius:var(--radius);background:transparent;color:var(--text-sec);cursor:pointer;font-family:'Quicksand',sans-serif}
+.back-btn:hover{background:var(--gray-light)}
+.logout-btn{font-size:12px;font-weight:600;padding:5px 14px;border:1px solid var(--border);border-radius:var(--radius);background:transparent;color:var(--text-sec);cursor:pointer;font-family:'Quicksand',sans-serif}
 .logout-btn:hover{background:var(--gray-light)}
+
 .page{max-width:780px;margin:0 auto;padding:2rem 1.5rem 4rem}
 .hero{margin-bottom:2rem}
 .hero-label{font-size:11px;font-weight:700;color:var(--dcarli-text);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
@@ -123,11 +150,13 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
   .metrics{grid-template-columns:1fr 1fr}
   .topbar{padding:0 1rem}
   .page{padding:1.25rem 1rem 3rem}
+  .select-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
+<!-- Tela de login -->
 <div class="auth-screen" id="auth-screen">
   <div class="auth-top-bar"></div>
   <div class="auth-circle-1"></div>
@@ -136,7 +165,6 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
   <div class="auth-dot-1"></div>
   <div class="auth-dot-2"></div>
   <div class="auth-dot-3"></div>
-
   <div class="auth-card">
     <div class="auth-logo-wrap">
       <img class="auth-logo-img-el" id="auth-logo-img" src="" alt="Logo"/>
@@ -147,12 +175,10 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
       <div class="auth-title">Portal de Acompanhamento</div>
       <div class="auth-divider"><span></span>Lei do Bem<span></span></div>
     </div>
-
     <div class="auth-tabs">
       <button class="auth-tab active" id="tab-login" onclick="switchTab('login')">Entrar</button>
       <button class="auth-tab" id="tab-signup" onclick="switchTab('signup')">Criar conta</button>
     </div>
-
     <div id="form-login">
       <label class="auth-label">E-mail</label>
       <input class="auth-input" type="email" id="login-email" placeholder="seu@email.com" onkeydown="if(event.key==='Enter')doLogin()"/>
@@ -161,7 +187,6 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
       <div class="auth-err" id="login-err">E-mail ou senha incorretos. Verifique e tente novamente.</div>
       <button class="auth-btn" id="login-btn" onclick="doLogin()">Entrar</button>
     </div>
-
     <div id="form-signup" style="display:none">
       <label class="auth-label">E-mail</label>
       <input class="auth-input" type="email" id="signup-email" placeholder="seu@email.com"/>
@@ -174,18 +199,41 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
       <div class="auth-ok" id="signup-ok">Cadastro realizado! Verifique seu e-mail para confirmar o acesso.</div>
       <button class="auth-btn" id="signup-btn" onclick="doSignup()">Criar conta</button>
     </div>
-
     <div class="auth-security">
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1a5 5 0 100 10A5 5 0 006 1zM6 3v3l2 1" stroke="#B4B2A9" stroke-width="1" stroke-linecap="round"/></svg>
       <span>Acesso seguro · Dados criptografados</span>
     </div>
   </div>
-
   <div class="auth-footer">
     <span>Powered by <strong style="color:rgba(204,214,80,0.6)">DCarli</strong></span>
   </div>
 </div>
 
+<!-- Tela de seleção de ano-base -->
+<div class="select-screen" id="select-screen">
+  <div class="auth-top-bar"></div>
+  <div class="auth-circle-1"></div>
+  <div class="auth-circle-3"></div>
+  <div class="select-card">
+    <div class="select-header">
+      <div class="select-logo-wrap">
+        <img class="select-logo-img" id="select-logo-img" src="" alt="Logo"/>
+        <div class="select-logo-icon" id="select-logo-fallback">
+          <svg width="22" height="22" viewBox="0 0 28 28" fill="none"><rect x="3" y="3" width="9" height="9" rx="2" fill="#CCD650" opacity=".9"/><rect x="16" y="3" width="9" height="9" rx="2" fill="#CCD650" opacity=".6"/><rect x="3" y="16" width="9" height="9" rx="2" fill="#CCD650" opacity=".6"/><rect x="16" y="16" width="9" height="9" rx="2" fill="#CCD650" opacity=".25"/></svg>
+        </div>
+      </div>
+      <div class="select-title">Selecione o ano-base</div>
+      <div class="select-sub">Escolha qual cronograma deseja consultar</div>
+    </div>
+    <div class="select-grid" id="select-grid"></div>
+    <button class="select-logout" onclick="doLogout()">Sair</button>
+  </div>
+  <div class="auth-footer">
+    <span>Powered by <strong style="color:rgba(204,214,80,0.6)">DCarli</strong></span>
+  </div>
+</div>
+
+<!-- Cronograma -->
 <div id="main-screen" style="display:none">
   <div class="topbar">
     <div class="logo-wrap">
@@ -198,9 +246,11 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
         <div class="logo-sub" id="client-sub">Lei do Bem</div>
       </div>
     </div>
-    <button class="logout-btn" onclick="doLogout()">Sair</button>
+    <div class="topbar-right">
+      <button class="back-btn" id="back-btn" onclick="goBack()" style="display:none">Trocar ano</button>
+      <button class="logout-btn" onclick="doLogout()">Sair</button>
+    </div>
   </div>
-
   <div class="page">
     <div class="hero">
       <div class="hero-label">Cronograma de execução</div>
@@ -208,7 +258,6 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
       <div class="hero-title" id="hero-title">Lei do Bem</div>
       <div class="hero-meta">Acompanhamento atualizado em tempo real</div>
     </div>
-
     <div class="metrics">
       <div class="metric-card">
         <div class="metric-label">Progresso</div>
@@ -226,7 +275,6 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
         <div class="metric-sub">documentos aguardados</div>
       </div>
     </div>
-
     <div class="progress-wrap">
       <div class="progress-head">
         <span>Progresso geral</span>
@@ -234,17 +282,14 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
       </div>
       <div class="track"><div class="fill" id="prog-fill" style="width:0%"></div></div>
     </div>
-
     <div id="alert-pend" class="alert" style="display:none">
       <div class="alert-dot"></div>
       <span>Existem documentos pendentes que precisam ser enviados.</span>
     </div>
-
     <div id="alert-delayed" class="alert-red" style="display:none">
       <div class="alert-red-dot"></div>
       <span>Existem itens em atraso que precisam de atenção.</span>
     </div>
-
     <div id="stages-list">
       <div class="loading">
         <span class="loading-dot"></span>
@@ -253,7 +298,6 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
       </div>
     </div>
   </div>
-
   <div class="page-footer">
     <span>Powered by <strong>DCarli</strong></span>
   </div>
@@ -265,6 +309,8 @@ const SUPABASE_KEY  = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFz
 const PARCEIRO_SLUG = "global-innovation";
 
 let accessToken = null;
+let todosClientes = [];
+let parceiroLogoUrl = null;
 
 async function fetchJSON(path, token) {
   const res = await fetch(SUPABASE_URL + path, {
@@ -279,20 +325,24 @@ async function loadParceiroInfo() {
     const arr = await fetchJSON("/rest/v1/parceiros?slug=eq." + PARCEIRO_SLUG + "&select=nome,logo_url");
     if (!arr.length) return;
     const p = arr[0];
+    parceiroLogoUrl = p.logo_url;
     document.getElementById("auth-partner-name").textContent = p.nome;
     document.title = p.nome + " | Portal de Acompanhamento";
     if (p.logo_url) {
-      const img = document.getElementById("auth-logo-img");
-      const fallback = document.getElementById("auth-logo-fallback");
+      var img = document.getElementById("auth-logo-img");
       img.src = p.logo_url;
       img.style.display = "block";
-      fallback.style.display = "none";
+      document.getElementById("auth-logo-fallback").style.display = "none";
+      var sImg = document.getElementById("select-logo-img");
+      sImg.src = p.logo_url;
+      sImg.style.display = "block";
+      document.getElementById("select-logo-fallback").style.display = "none";
     }
   } catch(e) {}
 }
 
 function switchTab(tab) {
-  const isLogin = tab === "login";
+  var isLogin = tab === "login";
   document.getElementById("tab-login").classList.toggle("active", isLogin);
   document.getElementById("tab-signup").classList.toggle("active", !isLogin);
   document.getElementById("form-login").style.display  = isLogin ? "block" : "none";
@@ -303,28 +353,34 @@ function switchTab(tab) {
 }
 
 async function doLogin() {
-  const email    = document.getElementById("login-email").value.trim();
-  const password = document.getElementById("login-password").value;
-  const btn      = document.getElementById("login-btn");
-  const err      = document.getElementById("login-err");
+  var email    = document.getElementById("login-email").value.trim();
+  var password = document.getElementById("login-password").value;
+  var btn      = document.getElementById("login-btn");
+  var err      = document.getElementById("login-err");
   if (!email || !password) return;
   btn.disabled = true;
   btn.textContent = "Entrando...";
   err.style.display = "none";
   try {
-    const res = await fetch(SUPABASE_URL + "/auth/v1/token?grant_type=password", {
+    var res = await fetch(SUPABASE_URL + "/auth/v1/token?grant_type=password", {
       method: "POST",
       headers: {"apikey": SUPABASE_KEY, "Content-Type": "application/json"},
       body: JSON.stringify({email: email, password: password})
     });
-    const data = await res.json();
+    var data = await res.json();
     if (!res.ok) throw new Error("invalido");
     accessToken = data.access_token;
-    const permitidos = await fetchJSON("/rest/v1/emails_permitidos?email=eq." + encodeURIComponent(email) + "&parceiro_slug=eq." + PARCEIRO_SLUG + "&select=cliente_slug", accessToken);
+    var permitidos = await fetchJSON("/rest/v1/emails_permitidos?email=eq." + encodeURIComponent(email) + "&parceiro_slug=eq." + PARCEIRO_SLUG + "&select=cliente_slug", accessToken);
     if (!permitidos.length) throw new Error("Nenhum cronograma vinculado a este e-mail neste portal.");
-    document.getElementById("auth-screen").style.display = "none";
-    document.getElementById("main-screen").style.display = "block";
-    loadCronograma(permitidos[0].cliente_slug);
+    todosClientes = permitidos.map(function(p) { return p.cliente_slug; });
+    if (todosClientes.length === 1) {
+      document.getElementById("auth-screen").style.display = "none";
+      document.getElementById("main-screen").style.display = "block";
+      loadCronograma(todosClientes[0]);
+    } else {
+      document.getElementById("auth-screen").style.display = "none";
+      showSelectScreen(todosClientes);
+    }
   } catch(e) {
     err.textContent = e.message === "invalido" ? "E-mail ou senha incorretos. Verifique e tente novamente." : e.message;
     err.style.display = "block";
@@ -334,30 +390,57 @@ async function doLogin() {
   }
 }
 
+async function showSelectScreen(slugs) {
+  var grid = document.getElementById("select-grid");
+  grid.innerHTML = '<div class="loading"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div>';
+  document.getElementById("select-screen").style.display = "flex";
+  try {
+    var slugList = slugs.map(function(s) { return "slug=eq." + s; }).join("&");
+    var clientes = await fetchJSON("/rest/v1/clientes?or=(" + slugList + ")&select=nome,slug,ano_base", accessToken);
+    clientes.sort(function(a, b) { return b.ano_base - a.ano_base; });
+    grid.innerHTML = clientes.map(function(c) {
+      return '<div class="select-item" onclick="selectCliente(\'' + c.slug + '\')">' +
+        '<div class="select-item-label">' + c.nome + '</div>' +
+        '<div class="select-item-year">' + c.ano_base + '</div>' +
+        '<span class="select-item-status" style="background:var(--blue-light);color:var(--blue)">Ano-base</span>' +
+        '</div>';
+    }).join("");
+  } catch(e) {
+    grid.innerHTML = '<div class="error-box">Erro ao carregar cronogramas.</div>';
+  }
+}
+
+function selectCliente(slug) {
+  document.getElementById("select-screen").style.display = "none";
+  document.getElementById("main-screen").style.display  = "block";
+  if (todosClientes.length > 1) {
+    document.getElementById("back-btn").style.display = "inline-block";
+  }
+  loadCronograma(slug);
+}
+
+function goBack() {
+  document.getElementById("main-screen").style.display  = "none";
+  document.getElementById("stages-list").innerHTML = '<div class="loading"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div>';
+  showSelectScreen(todosClientes);
+}
+
 async function doSignup() {
-  const email    = document.getElementById("signup-email").value.trim();
-  const password = document.getElementById("signup-password").value;
-  const confirm  = document.getElementById("signup-confirm").value;
-  const btn      = document.getElementById("signup-btn");
-  const err      = document.getElementById("signup-err");
-  const ok       = document.getElementById("signup-ok");
+  var email    = document.getElementById("signup-email").value.trim();
+  var password = document.getElementById("signup-password").value;
+  var confirm  = document.getElementById("signup-confirm").value;
+  var btn      = document.getElementById("signup-btn");
+  var err      = document.getElementById("signup-err");
+  var ok       = document.getElementById("signup-ok");
   err.style.display = "none";
   ok.style.display  = "none";
   if (!email || !password) return;
-  if (password !== confirm) {
-    err.textContent = "As senhas não coincidem.";
-    err.style.display = "block";
-    return;
-  }
-  if (password.length < 6) {
-    err.textContent = "A senha deve ter pelo menos 6 caracteres.";
-    err.style.display = "block";
-    return;
-  }
+  if (password !== confirm) { err.textContent = "As senhas não coincidem."; err.style.display = "block"; return; }
+  if (password.length < 6)  { err.textContent = "A senha deve ter pelo menos 6 caracteres."; err.style.display = "block"; return; }
   btn.disabled = true;
   btn.textContent = "Criando conta...";
   try {
-    const check = await fetchJSON("/rest/v1/emails_permitidos?email=eq." + encodeURIComponent(email) + "&parceiro_slug=eq." + PARCEIRO_SLUG + "&select=email");
+    var check = await fetchJSON("/rest/v1/emails_permitidos?email=eq." + encodeURIComponent(email) + "&parceiro_slug=eq." + PARCEIRO_SLUG + "&select=email");
     if (!check.length) {
       err.textContent = "Este e-mail não está autorizado neste portal. Entre em contato com seu consultor.";
       err.style.display = "block";
@@ -365,12 +448,12 @@ async function doSignup() {
       btn.textContent = "Criar conta";
       return;
     }
-    const res = await fetch(SUPABASE_URL + "/auth/v1/signup", {
+    var res = await fetch(SUPABASE_URL + "/auth/v1/signup", {
       method: "POST",
       headers: {"apikey": SUPABASE_KEY, "Content-Type": "application/json"},
       body: JSON.stringify({email: email, password: password})
     });
-    const data = await res.json();
+    var data = await res.json();
     if (!res.ok) throw new Error(data.error_description || data.msg || "Erro ao criar conta. O e-mail pode já estar cadastrado.");
     ok.style.display = "block";
     btn.disabled = false;
@@ -383,14 +466,17 @@ async function doSignup() {
   }
 }
 
-async function doLogout() {
+function doLogout() {
   accessToken = null;
+  todosClientes = [];
   document.getElementById("main-screen").style.display   = "none";
+  document.getElementById("select-screen").style.display = "none";
   document.getElementById("auth-screen").style.display   = "flex";
   document.getElementById("login-password").value        = "";
   document.getElementById("stages-list").innerHTML       = '<div class="loading"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div>';
   document.getElementById("logo-img").style.display      = "none";
   document.getElementById("logo-fallback").style.display = "flex";
+  document.getElementById("back-btn").style.display      = "none";
 }
 
 function sc(s) {
@@ -403,26 +489,26 @@ function sc(s) {
 function stageStatus(atividades) {
   if (!atividades.length) return "pending";
   if (atividades.some(function(t){ return t.status === "delayed"; })) return "delayed";
-  const done = atividades.filter(function(t){ return t.status === "done"; }).length;
+  var done = atividades.filter(function(t){ return t.status === "done"; }).length;
   if (done === atividades.length) return "done";
   if (done > 0 || atividades.some(function(t){ return t.status === "in-progress"; })) return "in-progress";
   return "pending";
 }
 
 function toggleStage(si) {
-  const b = document.getElementById("body-" + si);
-  const c = document.getElementById("chv-" + si);
+  var b = document.getElementById("body-" + si);
+  var c = document.getElementById("chv-" + si);
   b.classList.toggle("open");
   c.style.transform = b.classList.contains("open") ? "rotate(180deg)" : "rotate(0deg)";
 }
 
 async function loadCronograma(clienteSlug) {
   try {
-    const clienteArr = await fetchJSON("/rest/v1/clientes?slug=eq." + clienteSlug + "&select=*", accessToken);
-    const etapas     = await fetchJSON("/rest/v1/etapas?cliente_slug=eq." + clienteSlug + "&order=ordem.asc&select=*", accessToken);
-    const itens      = await fetchJSON("/rest/v1/itens?cliente_slug=eq." + clienteSlug + "&order=ordem.asc&select=*", accessToken);
+    var clienteArr = await fetchJSON("/rest/v1/clientes?slug=eq." + clienteSlug + "&select=*", accessToken);
+    var etapas     = await fetchJSON("/rest/v1/etapas?cliente_slug=eq." + clienteSlug + "&order=ordem.asc&select=*", accessToken);
+    var itens      = await fetchJSON("/rest/v1/itens?cliente_slug=eq." + clienteSlug + "&order=ordem.asc&select=*", accessToken);
 
-    const cliente = clienteArr[0];
+    var cliente = clienteArr[0];
     if (!cliente) throw new Error("Cliente não encontrado.");
 
     if (cliente.logo_url) {
@@ -431,22 +517,22 @@ async function loadCronograma(clienteSlug) {
       document.getElementById("logo-fallback").style.display = "none";
     }
 
-    document.title = cliente.nome + " | Portal de Acompanhamento";
+    document.title = cliente.nome + " | Lei do Bem " + cliente.ano_base;
     document.getElementById("client-name").textContent = cliente.nome;
     document.getElementById("client-sub").textContent  = "Lei do Bem " + cliente.ano_base;
     document.getElementById("hero-client").textContent = cliente.nome;
     document.getElementById("hero-title").textContent  = "Lei do Bem — Ano-base " + cliente.ano_base;
 
-    const atividades = itens.filter(function(i){ return i.tipo === "atividade"; });
-    const documentos  = itens.filter(function(i){ return i.tipo === "documento"; });
-    const totalAtiv   = atividades.length;
-    const doneAtiv    = atividades.filter(function(a){ return a.status === "done"; }).length;
-    const pct         = totalAtiv ? Math.round(doneAtiv / totalAtiv * 100) : 0;
-    const pendDocs    = documentos.filter(function(d){ return d.status === "pending"; }).length;
-    const hasDelayed  = itens.some(function(i){ return i.status === "delayed"; });
+    var atividades = itens.filter(function(i){ return i.tipo === "atividade"; });
+    var documentos  = itens.filter(function(i){ return i.tipo === "documento"; });
+    var totalAtiv   = atividades.length;
+    var doneAtiv    = atividades.filter(function(a){ return a.status === "done"; }).length;
+    var pct         = totalAtiv ? Math.round(doneAtiv / totalAtiv * 100) : 0;
+    var pendDocs    = documentos.filter(function(d){ return d.status === "pending"; }).length;
+    var hasDelayed  = itens.some(function(i){ return i.status === "delayed"; });
 
-    const doneStages = etapas.filter(function(e) {
-      const ea = atividades.filter(function(a){ return a.etapa_id === e.id; });
+    var doneStages = etapas.filter(function(e) {
+      var ea = atividades.filter(function(a){ return a.etapa_id === e.id; });
       return stageStatus(ea) === "done";
     }).length;
 
@@ -460,35 +546,35 @@ async function loadCronograma(clienteSlug) {
     document.getElementById("alert-pend").style.display     = pendDocs > 0 ? "flex" : "none";
     document.getElementById("alert-delayed").style.display  = hasDelayed   ? "flex" : "none";
 
-    const list = document.getElementById("stages-list");
+    var list = document.getElementById("stages-list");
     list.innerHTML = "";
 
     etapas.forEach(function(etapa, si) {
-      const ea = atividades.filter(function(a){ return a.etapa_id === etapa.id; });
-      const ed = documentos.filter(function(d){ return d.etapa_id === etapa.id; });
-      const ss  = stageStatus(ea);
-      const col = sc(ss);
-      const autoOpen = ss === "in-progress" || ss === "delayed";
+      var ea = atividades.filter(function(a){ return a.etapa_id === etapa.id; });
+      var ed = documentos.filter(function(d){ return d.etapa_id === etapa.id; });
+      var ss  = stageStatus(ea);
+      var col = sc(ss);
+      var autoOpen = ss === "in-progress" || ss === "delayed";
 
-      const card = document.createElement("div");
+      var card = document.createElement("div");
       card.className = "stage-card";
 
-      let ativHtml = ea.map(function(t) {
-        const tc = sc(t.status);
+      var ativHtml = ea.map(function(t) {
+        var tc = sc(t.status);
         return '<div class="task-row"><div class="task-dot" style="background:' + tc.dot + '"></div><span class="task-name">' + t.nome + '</span><span class="task-badge" style="background:' + tc.bg + ';color:' + tc.text + '">' + tc.label + '</span></div>';
       }).join("");
 
-      let docsHtml = "";
+      var docsHtml = "";
       if (ed.length > 0) {
         docsHtml = '<div class="section-label">Documentos</div>' + ed.map(function(d) {
-          const dc = sc(d.status);
-          const dlBtn = d.arquivo_url ? '<a class="download-btn" href="' + d.arquivo_url + '" target="_blank" download><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v7M3 5.5l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Baixar template</a>' : "";
-          const statusLabel = d.status === "done" ? "Recebido" : dc.label;
+          var dc = sc(d.status);
+          var dlBtn = d.arquivo_url ? '<a class="download-btn" href="' + d.arquivo_url + '" target="_blank" download><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v7M3 5.5l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Baixar template</a>' : "";
+          var statusLabel = d.status === "done" ? "Recebido" : dc.label;
           return '<div class="doc-row"><svg class="doc-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="1" width="9" height="11" rx="1.5" stroke="currentColor" stroke-width="1"/><path d="M4 4.5h5M4 6.5h5M4 8.5h3" stroke="currentColor" stroke-width=".9"/></svg><span class="doc-name">' + d.nome + '</span><div class="doc-right">' + dlBtn + '<span class="badge" style="background:' + dc.bg + ';color:' + dc.text + '">' + statusLabel + '</span></div></div>';
         }).join("");
       }
 
-      const noteHtml = etapa.observacao ? '<div class="note-box">' + etapa.observacao + '</div>' : "";
+      var noteHtml = etapa.observacao ? '<div class="note-box">' + etapa.observacao + '</div>' : "";
 
       card.innerHTML =
         '<div class="stage-header" onclick="toggleStage(' + si + ')">' +
