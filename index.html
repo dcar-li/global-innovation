@@ -181,6 +181,7 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
       <input class="auth-input" type="email" id="signup-email" placeholder="seu@email.com"/>
       <label class="auth-label">Senha</label>
       <input class="auth-input" type="password" id="signup-password" placeholder="Mínimo 6 caracteres" onkeydown="if(event.key==='Enter')doSignup()"/>
+      <div style="font-size:11px;color:var(--text-hint);margin:-8px 0 10px;font-weight:500">Mínimo de 6 caracteres</div>
       <label class="auth-label">Confirmar senha</label>
       <input class="auth-input" type="password" id="signup-confirm" placeholder="Repita a senha" onkeydown="if(event.key==='Enter')doSignup()"/>
       <div class="auth-err" id="signup-err">Ocorreu um erro. Verifique os dados e tente novamente.</div>
@@ -277,7 +278,7 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
 // ============================================================
 // CONFIGURAÇÃO — substitua pelos seus valores do Supabase
 // ============================================================
-const SUPABASE_URL  = "https://ywckzclxdbhlbgqpmtvc.supabase.co";
+const SUPABASE_URL  = "https://ywckzclxdbhlbgqpmtvc.supabase.co"";
 const SUPABASE_KEY  = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3Y2t6Y2x4ZGJobGJncXBtdHZjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM2NzgwNTksImV4cCI6MjA4OTI1NDA1OX0.Cfxbis5sgn2pT7mnULlEfqW1In1OmDBxUUTHsP3H3Og";
 const PARCEIRO_SLUG = "global-innovation";
 // ============================================================
@@ -385,7 +386,7 @@ async function doSignup() {
       body: JSON.stringify({email, password})
     });
     const data = await res.json();
-    if (!res.ok) throw new Error(data.error_description || "Erro ao criar conta");
+    if (!res.ok) throw new Error(data.error_description || data.msg || data.message || "Erro ao criar conta. Verifique se o e-mail já está cadastrado.");
     ok.style.display = "block";
     btn.disabled = false; btn.textContent = "Criar conta";
   } catch(e) {
