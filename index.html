@@ -395,8 +395,8 @@ async function showSelectScreen(slugs) {
   grid.innerHTML = '<div class="loading"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div>';
   document.getElementById("select-screen").style.display = "flex";
   try {
-    var slugList = slugs.map(function(s) { return "slug=eq." + s; }).join(",");
-    var clientes = await fetchJSON("/rest/v1/clientes?or=(" + slugList + ")&select=nome,slug,ano_base", accessToken);
+    var slugList = slugs.join(",");
+    var clientes = await fetchJSON("/rest/v1/clientes?slug=in.(" + slugList + ")&select=nome,slug,ano_base", accessToken);
     clientes.sort(function(a, b) { return b.ano_base - a.ano_base; });
     grid.innerHTML = clientes.map(function(c) {
       return '<div class="select-item" onclick="selectCliente(\'' + c.slug + '\')">' +
