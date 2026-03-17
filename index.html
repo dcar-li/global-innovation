@@ -21,7 +21,6 @@
   font-family:'Quicksand',sans-serif;
 }
 body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicksand',sans-serif}
-
 .auth-screen{min-height:100vh;background:var(--dcarli-dark);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;position:relative;overflow:hidden}
 .auth-top-bar{position:absolute;top:0;left:0;right:0;height:4px;background:var(--dcarli)}
 .auth-circle-1{position:absolute;top:-80px;right:-80px;width:320px;height:320px;border-radius:50%;border:1px solid rgba(204,214,80,0.12)}
@@ -30,7 +29,6 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
 .auth-dot-1{position:absolute;bottom:60px;right:60px;width:5px;height:5px;border-radius:50%;background:rgba(204,214,80,0.35)}
 .auth-dot-2{position:absolute;top:80px;left:80px;width:4px;height:4px;border-radius:50%;background:rgba(204,214,80,0.2)}
 .auth-dot-3{position:absolute;top:200px;right:140px;width:3px;height:3px;border-radius:50%;background:rgba(204,214,80,0.15)}
-
 .auth-card{background:var(--surface);border-radius:16px;padding:2.5rem;width:100%;max-width:380px;position:relative;z-index:1}
 .auth-logo-wrap{text-align:center;margin-bottom:1.5rem}
 .auth-logo-icon{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;background:#f5f7d9;border-radius:12px;margin-bottom:1rem}
@@ -45,16 +43,16 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
 .auth-label{font-size:12px;font-weight:600;color:var(--text-sec);margin-bottom:5px;display:block}
 .auth-input{width:100%;padding:9px 12px;border:1px solid var(--border);border-radius:var(--radius);font-size:14px;background:var(--bg);color:var(--text);font-family:'Quicksand',sans-serif;margin-bottom:12px;font-weight:500}
 .auth-input:focus{outline:none;border-color:var(--dcarli)}
+.auth-hint{font-size:11px;color:var(--text-hint);margin:-8px 0 10px;font-weight:500}
 .auth-btn{width:100%;padding:10px;background:var(--dcarli);color:var(--dcarli-dark);border:none;border-radius:var(--radius);font-size:14px;font-weight:700;cursor:pointer;font-family:'Quicksand',sans-serif;transition:opacity .15s;margin-top:4px}
 .auth-btn:hover{opacity:.9}
 .auth-btn:disabled{opacity:.5;cursor:not-allowed}
 .auth-err{font-size:12px;color:var(--red);margin-top:8px;display:none;line-height:1.5;font-weight:500}
 .auth-ok{font-size:12px;color:var(--green);margin-top:8px;display:none;line-height:1.5;background:var(--green-light);padding:8px 10px;border-radius:8px;font-weight:500}
 .auth-security{margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--gray-light);display:flex;align-items:center;justify-content:center;gap:6px}
-.auth-security span{font-size:11px;color:var(--text-hint);font-family:'Quicksand',monospace;font-weight:500}
+.auth-security span{font-size:11px;color:var(--text-hint);font-weight:500}
 .auth-footer{margin-top:1.5rem;text-align:center;position:relative;z-index:1}
 .auth-footer span{font-size:11px;color:rgba(204,214,80,0.45);font-weight:600;letter-spacing:.5px}
-
 .topbar{background:var(--surface);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:100;border-top:3px solid var(--dcarli)}
 .logo-wrap{display:flex;align-items:center;gap:12px}
 .logo-img{height:36px;width:auto;max-width:160px;object-fit:contain;display:none}
@@ -65,32 +63,27 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
 .logo-sub{font-size:11px;color:var(--text-sec);margin-top:1px;font-weight:500}
 .logout-btn{font-size:12px;font-weight:600;padding:5px 14px;border:1px solid var(--border);border-radius:var(--radius);background:transparent;color:var(--text-sec);cursor:pointer;font-family:'Quicksand',sans-serif;transition:all .15s}
 .logout-btn:hover{background:var(--gray-light)}
-
 .page{max-width:780px;margin:0 auto;padding:2rem 1.5rem 4rem}
 .hero{margin-bottom:2rem}
 .hero-label{font-size:11px;font-weight:700;color:var(--dcarli-text);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
 .hero-client{font-size:28px;font-weight:700;color:var(--blue);letter-spacing:-.5px;line-height:1.2;margin-top:2px}
 .hero-title{font-size:22px;font-weight:600;color:var(--text);letter-spacing:-.3px;line-height:1.2}
 .hero-meta{font-size:13px;color:var(--text-sec);margin-top:6px;font-weight:500}
-
 .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:2rem}
 .metric-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px}
 .metric-label{font-size:11px;color:var(--text-hint);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;font-weight:600}
 .metric-value{font-size:22px;font-weight:700;color:var(--text);letter-spacing:-.5px}
 .metric-sub{font-size:12px;color:var(--text-sec);margin-top:2px;font-weight:500}
-
 .progress-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;margin-bottom:2rem}
 .progress-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
 .progress-head span{font-size:13px;font-weight:600;color:var(--text)}
 .progress-pct{font-size:13px;font-weight:700;color:var(--dcarli-text)}
 .track{height:8px;background:var(--gray-light);border-radius:99px;overflow:hidden}
 .fill{height:100%;background:linear-gradient(90deg,var(--dcarli),#8a9118);border-radius:99px;transition:width .5s cubic-bezier(.4,0,.2,1)}
-
 .alert{background:var(--amber-light);border:1px solid #FAC775;border-radius:var(--radius);padding:10px 14px;font-size:13px;color:var(--amber);margin-bottom:1.25rem;display:flex;align-items:center;gap:8px;font-weight:500}
 .alert-dot{width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0}
 .alert-red{background:var(--red-light);border:1px solid #F09595;border-radius:var(--radius);padding:10px 14px;font-size:13px;color:var(--red);margin-bottom:1.25rem;display:flex;align-items:center;gap:8px;font-weight:500}
 .alert-red-dot{width:6px;height:6px;border-radius:50%;background:var(--red-mid);flex-shrink:0}
-
 .stages{display:flex;flex-direction:column;gap:8px}
 .stage-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:box-shadow .15s}
 .stage-card:hover{box-shadow:0 2px 12px rgba(0,0,0,.06)}
@@ -117,11 +110,9 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
 .download-btn:hover{background:#e8ed9a}
 .download-btn svg{width:11px;height:11px;flex-shrink:0}
 .note-box{background:var(--blue-light);border-radius:8px;padding:10px 12px;font-size:13px;color:var(--blue);line-height:1.6;margin-top:12px;border-left:3px solid var(--blue-mid);font-weight:500}
-
 .page-footer{text-align:center;padding:1.5rem;border-top:1px solid var(--border);margin-top:2rem}
 .page-footer span{font-size:11px;color:var(--text-hint);font-weight:600;letter-spacing:.3px}
 .page-footer strong{color:var(--dcarli-text)}
-
 .loading{text-align:center;padding:3rem;color:var(--text-hint);font-size:14px}
 .loading-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gray-mid);margin:0 2px;animation:pulse 1.2s ease-in-out infinite}
 .loading-dot:nth-child(2){animation-delay:.2s}
@@ -137,7 +128,6 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
 </head>
 <body>
 
-<!-- Tela de login -->
 <div class="auth-screen" id="auth-screen">
   <div class="auth-top-bar"></div>
   <div class="auth-circle-1"></div>
@@ -155,11 +145,7 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
       </div>
       <div class="auth-partner-name" id="auth-partner-name">Portal</div>
       <div class="auth-title">Portal de Acompanhamento</div>
-      <div class="auth-divider">
-        <span></span>
-        Lei do Bem
-        <span></span>
-      </div>
+      <div class="auth-divider"><span></span>Lei do Bem<span></span></div>
     </div>
 
     <div class="auth-tabs">
@@ -171,7 +157,7 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
       <label class="auth-label">E-mail</label>
       <input class="auth-input" type="email" id="login-email" placeholder="seu@email.com" onkeydown="if(event.key==='Enter')doLogin()"/>
       <label class="auth-label">Senha</label>
-      <input class="auth-input" type="password" id="login-password" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()"/>
+      <input class="auth-input" type="password" id="login-password" placeholder="Sua senha" onkeydown="if(event.key==='Enter')doLogin()"/>
       <div class="auth-err" id="login-err">E-mail ou senha incorretos. Verifique e tente novamente.</div>
       <button class="auth-btn" id="login-btn" onclick="doLogin()">Entrar</button>
     </div>
@@ -180,8 +166,8 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
       <label class="auth-label">E-mail</label>
       <input class="auth-input" type="email" id="signup-email" placeholder="seu@email.com"/>
       <label class="auth-label">Senha</label>
-      <input class="auth-input" type="password" id="signup-password" placeholder="Mínimo 6 caracteres" onkeydown="if(event.key==='Enter')doSignup()"/>
-      <div style="font-size:11px;color:var(--text-hint);margin:-8px 0 10px;font-weight:500">Mínimo de 6 caracteres</div>
+      <input class="auth-input" type="password" id="signup-password" placeholder="Crie uma senha"/>
+      <div class="auth-hint">Mínimo de 6 caracteres</div>
       <label class="auth-label">Confirmar senha</label>
       <input class="auth-input" type="password" id="signup-confirm" placeholder="Repita a senha" onkeydown="if(event.key==='Enter')doSignup()"/>
       <div class="auth-err" id="signup-err">Ocorreu um erro. Verifique os dados e tente novamente.</div>
@@ -200,7 +186,6 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
   </div>
 </div>
 
-<!-- Cronograma -->
 <div id="main-screen" style="display:none">
   <div class="topbar">
     <div class="logo-wrap">
@@ -275,13 +260,9 @@ body{background:var(--bg);color:var(--text);min-height:100vh;font-family:'Quicks
 </div>
 
 <script>
-// ============================================================
-// CONFIGURAÇÃO — substitua pelos seus valores do Supabase
-// ============================================================
-const SUPABASE_URL  = "https://ywckzclxdbhlbgqpmtvc.supabase.co"";
+const SUPABASE_URL  = "https://ywckzclxdbhlbgqpmtvc.supabase.co";
 const SUPABASE_KEY  = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3Y2t6Y2x4ZGJobGJncXBtdHZjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM2NzgwNTksImV4cCI6MjA4OTI1NDA1OX0.Cfxbis5sgn2pT7mnULlEfqW1In1OmDBxUUTHsP3H3Og";
 const PARCEIRO_SLUG = "global-innovation";
-// ============================================================
 
 let accessToken = null;
 
@@ -295,7 +276,7 @@ async function fetchJSON(path, token) {
 
 async function loadParceiroInfo() {
   try {
-    const arr = await fetchJSON(`/rest/v1/parceiros?slug=eq.${PARCEIRO_SLUG}&select=nome,logo_url`);
+    const arr = await fetchJSON("/rest/v1/parceiros?slug=eq." + PARCEIRO_SLUG + "&select=nome,logo_url");
     if (!arr.length) return;
     const p = arr[0];
     document.getElementById("auth-partner-name").textContent = p.nome;
@@ -304,7 +285,7 @@ async function loadParceiroInfo() {
       const img = document.getElementById("auth-logo-img");
       const fallback = document.getElementById("auth-logo-fallback");
       img.src = p.logo_url;
-      img.style.display    = "block";
+      img.style.display = "block";
       fallback.style.display = "none";
     }
   } catch(e) {}
@@ -327,32 +308,29 @@ async function doLogin() {
   const btn      = document.getElementById("login-btn");
   const err      = document.getElementById("login-err");
   if (!email || !password) return;
-  btn.disabled = true; btn.textContent = "Entrando..."; err.style.display = "none";
+  btn.disabled = true;
+  btn.textContent = "Entrando...";
+  err.style.display = "none";
   try {
-    const res  = await fetch(SUPABASE_URL + "/auth/v1/token?grant_type=password", {
+    const res = await fetch(SUPABASE_URL + "/auth/v1/token?grant_type=password", {
       method: "POST",
       headers: {"apikey": SUPABASE_KEY, "Content-Type": "application/json"},
-      body: JSON.stringify({email, password})
+      body: JSON.stringify({email: email, password: password})
     });
     const data = await res.json();
-    if (!res.ok) throw new Error("Inválido");
+    if (!res.ok) throw new Error("invalido");
     accessToken = data.access_token;
-
-    const permitidos = await fetchJSON(
-      `/rest/v1/emails_permitidos?email=eq.${encodeURIComponent(email)}&parceiro_slug=eq.${PARCEIRO_SLUG}&select=cliente_slug`,
-      accessToken
-    );
+    const permitidos = await fetchJSON("/rest/v1/emails_permitidos?email=eq." + encodeURIComponent(email) + "&parceiro_slug=eq." + PARCEIRO_SLUG + "&select=cliente_slug", accessToken);
     if (!permitidos.length) throw new Error("Nenhum cronograma vinculado a este e-mail neste portal.");
-
     document.getElementById("auth-screen").style.display = "none";
     document.getElementById("main-screen").style.display = "block";
     loadCronograma(permitidos[0].cliente_slug);
-
   } catch(e) {
-    err.textContent   = e.message === "Inválido" ? "E-mail ou senha incorretos. Verifique e tente novamente." : e.message;
+    err.textContent = e.message === "invalido" ? "E-mail ou senha incorretos. Verifique e tente novamente." : e.message;
     err.style.display = "block";
-    btn.disabled = false; btn.textContent = "Entrar";
-    accessToken  = null;
+    btn.disabled = false;
+    btn.textContent = "Entrar";
+    accessToken = null;
   }
 }
 
@@ -363,46 +341,55 @@ async function doSignup() {
   const btn      = document.getElementById("signup-btn");
   const err      = document.getElementById("signup-err");
   const ok       = document.getElementById("signup-ok");
-
-  err.style.display = "none"; ok.style.display = "none";
+  err.style.display = "none";
+  ok.style.display  = "none";
   if (!email || !password) return;
-  if (password !== confirm) { err.textContent = "As senhas não coincidem."; err.style.display = "block"; return; }
-  if (password.length < 6)  { err.textContent = "A senha deve ter pelo menos 6 caracteres."; err.style.display = "block"; return; }
-
-  btn.disabled = true; btn.textContent = "Criando conta...";
+  if (password !== confirm) {
+    err.textContent = "As senhas não coincidem.";
+    err.style.display = "block";
+    return;
+  }
+  if (password.length < 6) {
+    err.textContent = "A senha deve ter pelo menos 6 caracteres.";
+    err.style.display = "block";
+    return;
+  }
+  btn.disabled = true;
+  btn.textContent = "Criando conta...";
   try {
-    const check = await fetchJSON(
-      `/rest/v1/emails_permitidos?email=eq.${encodeURIComponent(email)}&parceiro_slug=eq.${PARCEIRO_SLUG}&select=email`
-    );
+    const check = await fetchJSON("/rest/v1/emails_permitidos?email=eq." + encodeURIComponent(email) + "&parceiro_slug=eq." + PARCEIRO_SLUG + "&select=email");
     if (!check.length) {
-      err.textContent   = "Este e-mail não está autorizado neste portal. Entre em contato com seu consultor.";
+      err.textContent = "Este e-mail não está autorizado neste portal. Entre em contato com seu consultor.";
       err.style.display = "block";
-      btn.disabled = false; btn.textContent = "Criar conta";
+      btn.disabled = false;
+      btn.textContent = "Criar conta";
       return;
     }
-    const res  = await fetch(SUPABASE_URL + "/auth/v1/signup", {
+    const res = await fetch(SUPABASE_URL + "/auth/v1/signup", {
       method: "POST",
       headers: {"apikey": SUPABASE_KEY, "Content-Type": "application/json"},
-      body: JSON.stringify({email, password})
+      body: JSON.stringify({email: email, password: password})
     });
     const data = await res.json();
-    if (!res.ok) throw new Error(data.error_description || data.msg || data.message || "Erro ao criar conta. Verifique se o e-mail já está cadastrado.");
+    if (!res.ok) throw new Error(data.error_description || data.msg || "Erro ao criar conta. O e-mail pode já estar cadastrado.");
     ok.style.display = "block";
-    btn.disabled = false; btn.textContent = "Criar conta";
+    btn.disabled = false;
+    btn.textContent = "Criar conta";
   } catch(e) {
-    err.textContent   = e.message;
+    err.textContent = e.message;
     err.style.display = "block";
-    btn.disabled = false; btn.textContent = "Criar conta";
+    btn.disabled = false;
+    btn.textContent = "Criar conta";
   }
 }
 
 async function doLogout() {
   accessToken = null;
-  document.getElementById("main-screen").style.display  = "none";
-  document.getElementById("auth-screen").style.display  = "flex";
-  document.getElementById("login-password").value       = "";
-  document.getElementById("stages-list").innerHTML      = '<div class="loading"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div>';
-  document.getElementById("logo-img").style.display     = "none";
+  document.getElementById("main-screen").style.display   = "none";
+  document.getElementById("auth-screen").style.display   = "flex";
+  document.getElementById("login-password").value        = "";
+  document.getElementById("stages-list").innerHTML       = '<div class="loading"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div>';
+  document.getElementById("logo-img").style.display      = "none";
   document.getElementById("logo-fallback").style.display = "flex";
 }
 
@@ -415,10 +402,10 @@ function sc(s) {
 
 function stageStatus(atividades) {
   if (!atividades.length) return "pending";
-  if (atividades.some(t => t.status === "delayed")) return "delayed";
-  const done = atividades.filter(t => t.status === "done").length;
+  if (atividades.some(function(t){ return t.status === "delayed"; })) return "delayed";
+  const done = atividades.filter(function(t){ return t.status === "done"; }).length;
   if (done === atividades.length) return "done";
-  if (done > 0 || atividades.some(t => t.status === "in-progress")) return "in-progress";
+  if (done > 0 || atividades.some(function(t){ return t.status === "in-progress"; })) return "in-progress";
   return "pending";
 }
 
@@ -431,18 +418,16 @@ function toggleStage(si) {
 
 async function loadCronograma(clienteSlug) {
   try {
-    const [clienteArr, etapas, itens] = await Promise.all([
-      fetchJSON(`/rest/v1/clientes?slug=eq.${clienteSlug}&select=*`, accessToken),
-      fetchJSON(`/rest/v1/etapas?cliente_slug=eq.${clienteSlug}&order=ordem.asc&select=*`, accessToken),
-      fetchJSON(`/rest/v1/itens?cliente_slug=eq.${clienteSlug}&order=ordem.asc&select=*`, accessToken)
-    ]);
+    const clienteArr = await fetchJSON("/rest/v1/clientes?slug=eq." + clienteSlug + "&select=*", accessToken);
+    const etapas     = await fetchJSON("/rest/v1/etapas?cliente_slug=eq." + clienteSlug + "&order=ordem.asc&select=*", accessToken);
+    const itens      = await fetchJSON("/rest/v1/itens?cliente_slug=eq." + clienteSlug + "&order=ordem.asc&select=*", accessToken);
 
     const cliente = clienteArr[0];
     if (!cliente) throw new Error("Cliente não encontrado.");
 
     if (cliente.logo_url) {
-      document.getElementById("logo-img").src               = cliente.logo_url;
-      document.getElementById("logo-img").style.display     = "block";
+      document.getElementById("logo-img").src                = cliente.logo_url;
+      document.getElementById("logo-img").style.display      = "block";
       document.getElementById("logo-fallback").style.display = "none";
     }
 
@@ -452,16 +437,16 @@ async function loadCronograma(clienteSlug) {
     document.getElementById("hero-client").textContent = cliente.nome;
     document.getElementById("hero-title").textContent  = "Lei do Bem — Ano-base " + cliente.ano_base;
 
-    const atividades = itens.filter(i => i.tipo === "atividade");
-    const documentos  = itens.filter(i => i.tipo === "documento");
+    const atividades = itens.filter(function(i){ return i.tipo === "atividade"; });
+    const documentos  = itens.filter(function(i){ return i.tipo === "documento"; });
     const totalAtiv   = atividades.length;
-    const doneAtiv    = atividades.filter(a => a.status === "done").length;
+    const doneAtiv    = atividades.filter(function(a){ return a.status === "done"; }).length;
     const pct         = totalAtiv ? Math.round(doneAtiv / totalAtiv * 100) : 0;
-    const pendDocs    = documentos.filter(d => d.status === "pending").length;
-    const hasDelayed  = itens.some(i => i.status === "delayed");
+    const pendDocs    = documentos.filter(function(d){ return d.status === "pending"; }).length;
+    const hasDelayed  = itens.some(function(i){ return i.status === "delayed"; });
 
-    const doneStages = etapas.filter(e => {
-      const ea = atividades.filter(a => a.etapa_id === e.id);
+    const doneStages = etapas.filter(function(e) {
+      const ea = atividades.filter(function(a){ return a.etapa_id === e.id; });
       return stageStatus(ea) === "done";
     }).length;
 
@@ -478,67 +463,53 @@ async function loadCronograma(clienteSlug) {
     const list = document.getElementById("stages-list");
     list.innerHTML = "";
 
-    etapas.forEach((etapa, si) => {
-      const ea = atividades.filter(a => a.etapa_id === etapa.id);
-      const ed = documentos.filter(d => d.etapa_id === etapa.id);
+    etapas.forEach(function(etapa, si) {
+      const ea = atividades.filter(function(a){ return a.etapa_id === etapa.id; });
+      const ed = documentos.filter(function(d){ return d.etapa_id === etapa.id; });
       const ss  = stageStatus(ea);
       const col = sc(ss);
       const autoOpen = ss === "in-progress" || ss === "delayed";
 
       const card = document.createElement("div");
       card.className = "stage-card";
-      card.innerHTML = `
-        <div class="stage-header" onclick="toggleStage(${si})">
-          <div class="stage-num" style="background:${col.bg};color:${col.text}">${String(si+1).padStart(2,"0")}</div>
-          <div class="stage-info">
-            <div class="stage-name">${etapa.nome}</div>
-            <div class="stage-date">${etapa.periodo}</div>
-          </div>
-          <span class="badge" style="background:${col.bg};color:${col.text}">${col.label}</span>
-          <span class="chev" id="chv-${si}">▼</span>
-        </div>
-        <div class="stage-body${autoOpen ? " open" : ""}" id="body-${si}">
-          <div class="stage-inner">
-            <div class="section-label">Atividades</div>
-            ${ea.map(t => {
-              const tc = sc(t.status);
-              return `<div class="task-row">
-                <div class="task-dot" style="background:${tc.dot}"></div>
-                <span class="task-name">${t.nome}</span>
-                <span class="task-badge" style="background:${tc.bg};color:${tc.text}">${tc.label}</span>
-              </div>`;
-            }).join("")}
-            ${ed.length > 0 ? `
-            <div class="section-label">Documentos</div>
-            ${ed.map(d => {
-              const dc = sc(d.status);
-              return `<div class="doc-row">
-                <svg class="doc-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="1" width="9" height="11" rx="1.5" stroke="currentColor" stroke-width="1"/><path d="M4 4.5h5M4 6.5h5M4 8.5h3" stroke="currentColor" stroke-width=".9"/></svg>
-                <span class="doc-name">${d.nome}</span>
-                <div class="doc-right">
-                  ${d.arquivo_url ? `
-                  <a class="download-btn" href="${d.arquivo_url}" target="_blank" download>
-                    <svg viewBox="0 0 12 12" fill="none"><path d="M6 1v7M3 5.5l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    Baixar template
-                  </a>` : ""}
-                  <span class="badge" style="background:${dc.bg};color:${dc.text}">${d.status === "done" ? "Recebido" : dc.label}</span>
-                </div>
-              </div>`;
-            }).join("")}` : ""}
-            ${etapa.observacao ? `<div class="note-box">${etapa.observacao}</div>` : ""}
-          </div>
-        </div>
-      `;
+
+      let ativHtml = ea.map(function(t) {
+        const tc = sc(t.status);
+        return '<div class="task-row"><div class="task-dot" style="background:' + tc.dot + '"></div><span class="task-name">' + t.nome + '</span><span class="task-badge" style="background:' + tc.bg + ';color:' + tc.text + '">' + tc.label + '</span></div>';
+      }).join("");
+
+      let docsHtml = "";
+      if (ed.length > 0) {
+        docsHtml = '<div class="section-label">Documentos</div>' + ed.map(function(d) {
+          const dc = sc(d.status);
+          const dlBtn = d.arquivo_url ? '<a class="download-btn" href="' + d.arquivo_url + '" target="_blank" download><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v7M3 5.5l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Baixar template</a>' : "";
+          const statusLabel = d.status === "done" ? "Recebido" : dc.label;
+          return '<div class="doc-row"><svg class="doc-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="2" y="1" width="9" height="11" rx="1.5" stroke="currentColor" stroke-width="1"/><path d="M4 4.5h5M4 6.5h5M4 8.5h3" stroke="currentColor" stroke-width=".9"/></svg><span class="doc-name">' + d.nome + '</span><div class="doc-right">' + dlBtn + '<span class="badge" style="background:' + dc.bg + ';color:' + dc.text + '">' + statusLabel + '</span></div></div>';
+        }).join("");
+      }
+
+      const noteHtml = etapa.observacao ? '<div class="note-box">' + etapa.observacao + '</div>' : "";
+
+      card.innerHTML =
+        '<div class="stage-header" onclick="toggleStage(' + si + ')">' +
+          '<div class="stage-num" style="background:' + col.bg + ';color:' + col.text + '">' + String(si+1).padStart(2,"0") + '</div>' +
+          '<div class="stage-info"><div class="stage-name">' + etapa.nome + '</div><div class="stage-date">' + etapa.periodo + '</div></div>' +
+          '<span class="badge" style="background:' + col.bg + ';color:' + col.text + '">' + col.label + '</span>' +
+          '<span class="chev" id="chv-' + si + '">▼</span>' +
+        '</div>' +
+        '<div class="stage-body' + (autoOpen ? " open" : "") + '" id="body-' + si + '">' +
+          '<div class="stage-inner">' +
+            '<div class="section-label">Atividades</div>' +
+            ativHtml + docsHtml + noteHtml +
+          '</div>' +
+        '</div>';
+
       list.appendChild(card);
       if (autoOpen) document.getElementById("chv-" + si).style.transform = "rotate(180deg)";
     });
 
-  } catch(err) {
-    document.getElementById("stages-list").innerHTML = `
-      <div class="error-box">
-        Não foi possível carregar os dados.<br>
-        <small style="opacity:.7;margin-top:4px;display:block">${err.message}</small>
-      </div>`;
+  } catch(e) {
+    document.getElementById("stages-list").innerHTML = '<div class="error-box">Não foi possível carregar os dados.<br><small style="opacity:.7;margin-top:4px;display:block">' + e.message + '</small></div>';
   }
 }
 
