@@ -15,7 +15,7 @@
   font-family:'Quicksand',sans-serif;
 }
 body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sans-serif}
- 
+
 /* TOPBAR */
 .topbar{background:var(--dcarli-dark);height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;position:sticky;top:0;z-index:100;border-bottom:2px solid var(--dcarli)}
 .t-left{display:flex;align-items:center;gap:12px}
@@ -29,36 +29,41 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
 .t-chip{background:rgba(204,214,80,0.12);border:1px solid rgba(204,214,80,0.25);color:var(--dcarli);font-size:10px;font-weight:700;padding:4px 10px;border-radius:99px}
 .t-btn{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);font-size:10px;font-weight:600;padding:4px 10px;border-radius:6px;cursor:pointer;font-family:'Quicksand',sans-serif}
 .t-btn:hover{background:rgba(255,255,255,0.12)}
- 
+
 /* AUTH */
-.auth-screen{min-height:100vh;background:var(--dcarli-dark);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;position:relative;overflow:hidden}
+.auth-screen{min-height:100vh;background:linear-gradient(135deg,#1a1f0e 0%,#1e2d14 40%,#2a3a1a 70%,#1a1f0e 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;position:relative;overflow:hidden}
 .auth-circle{position:absolute;border-radius:50%;border:1px solid rgba(204,214,80,0.08)}
 .auth-dot{position:absolute;border-radius:50%}
 .auth-card{background:#fff;border-radius:16px;padding:2.5rem;width:100%;max-width:380px;position:relative;z-index:1}
 .auth-logo-wrap{text-align:center;margin-bottom:1.5rem}
 .auth-logo-icon{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;background:var(--dcarli-light);border-radius:12px;margin-bottom:1rem}
-.auth-logo-img-el{max-height:52px;max-width:180px;object-fit:contain;display:none;margin:0 auto 1rem}
-.auth-partner-name{font-size:12px;font-weight:700;color:var(--dcarli-text);letter-spacing:.8px;text-transform:uppercase;margin-bottom:6px}
-.auth-title{font-size:18px;font-weight:700;color:#1a1a18;margin-bottom:6px}
-.auth-divider{display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px;color:#9e9e9a}
-.auth-divider span{width:20px;height:1px;background:#e2e1db;display:inline-block}
-.auth-tabs{display:flex;background:#F1EFE8;border-radius:8px;padding:3px;gap:2px;margin:1.25rem 0}
+.auth-logo-img-el{max-height:64px;max-width:200px;object-fit:contain;display:none;margin:0 auto 1rem}
+.auth-logo-divider{display:flex;align-items:center;gap:8px;margin:0 0 10px}
+.auth-logo-divider-line{flex:1;height:1px;background:#e2e1db}
+.auth-logo-divider-text{font-size:10px;font-weight:700;color:#9e9e9a;text-transform:uppercase;letter-spacing:.8px;white-space:nowrap}
+.auth-title{font-size:16px;font-weight:700;color:#1a1a18;margin-bottom:4px}
+.auth-sub{font-size:12px;color:#6b6b67;font-weight:500;margin-bottom:1.5rem}
+.auth-tabs{display:flex;background:#F1EFE8;border-radius:8px;padding:3px;gap:2px;margin:0 0 1.25rem}
 .auth-tab{flex:1;font-size:13px;font-weight:600;padding:6px;border-radius:6px;border:none;background:transparent;color:#6b6b67;cursor:pointer;font-family:'Quicksand',sans-serif}
 .auth-tab.active{background:#fff;color:var(--dcarli-text);box-shadow:0 1px 3px rgba(0,0,0,.08)}
 .auth-label{font-size:12px;font-weight:600;color:#6b6b67;margin-bottom:5px;display:block}
 .auth-input{width:100%;padding:9px 12px;border:1px solid #e2e1db;border-radius:var(--radius);font-size:14px;background:#f7f6f2;color:#1a1a18;font-family:'Quicksand',sans-serif;margin-bottom:12px;font-weight:500}
 .auth-input:focus{outline:none;border-color:var(--dcarli)}
 .auth-hint{font-size:11px;color:#9e9e9a;margin:-8px 0 10px;font-weight:500}
-.auth-btn{width:100%;padding:10px;background:var(--dcarli);color:var(--dcarli-dark);border:none;border-radius:var(--radius);font-size:14px;font-weight:700;cursor:pointer;font-family:'Quicksand',sans-serif;margin-top:4px}
+.auth-btn{width:100%;padding:10px;background:linear-gradient(135deg,#CCD650,#a8b030);color:#1a1f0e;border:none;border-radius:var(--radius);font-size:14px;font-weight:700;cursor:pointer;font-family:'Quicksand',sans-serif;margin-top:4px;box-shadow:0 4px 12px rgba(204,214,80,0.25)}
 .auth-btn:hover{opacity:.9}
 .auth-btn:disabled{opacity:.5;cursor:not-allowed}
 .auth-err{font-size:12px;color:#A32D2D;margin-top:8px;display:none;line-height:1.5;font-weight:500}
 .auth-ok{font-size:12px;color:#3B6D11;margin-top:8px;display:none;line-height:1.5;background:#EAF3DE;padding:8px 10px;border-radius:8px;font-weight:500}
+.auth-forgot{text-align:center;margin-top:10px;font-size:11px;color:#9e9e9a;font-weight:500}
+.auth-forgot a{color:var(--dcarli-text);font-weight:700;text-decoration:none;cursor:pointer}
+.auth-forgot a:hover{text-decoration:underline}
+.auth-reset-ok{font-size:12px;color:#3B6D11;margin-top:8px;display:none;line-height:1.5;background:#EAF3DE;padding:8px 10px;border-radius:8px;font-weight:500;text-align:center}
 .auth-security{margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid #F1EFE8;display:flex;align-items:center;justify-content:center;gap:6px}
 .auth-security span{font-size:11px;color:#9e9e9a;font-weight:500}
 .auth-footer{margin-top:1.5rem;text-align:center;position:relative;z-index:1}
 .auth-footer span{font-size:11px;color:rgba(204,214,80,0.45);font-weight:600}
- 
+
 /* HERO */
 .hero-section{background:var(--dcarli-dark);padding:1.5rem 2rem 2rem;position:relative;overflow:hidden}
 .hero-circle{position:absolute;border-radius:50%;border:1px solid rgba(204,214,80,0.07)}
@@ -78,7 +83,7 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
 .mcti-dot{width:6px;height:6px;border-radius:50%}
 .mcti-val{font-size:13px;font-weight:700;color:#fff}
 .mcti-hint{font-size:10px;color:rgba(255,255,255,0.25);margin-top:2px}
- 
+
 /* STATS */
 .stats-bar{background:var(--stats-bg);border-bottom:1px solid var(--stats-border)}
 .stats-inner{display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid var(--stats-border)}
@@ -92,7 +97,7 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
 .prog-track{flex:1;height:4px;background:rgba(255,255,255,0.06);border-radius:99px;overflow:hidden}
 .prog-fill{height:100%;background:linear-gradient(90deg,var(--dcarli),var(--dcarli-text));border-radius:99px;transition:width .5s cubic-bezier(.4,0,.2,1)}
 .prog-pct{font-size:12px;font-weight:700;color:var(--dcarli-text);white-space:nowrap}
- 
+
 /* HISTÓRICO */
 .hist-totals{background:var(--stats-bg);border-bottom:1px solid var(--stats-border);display:flex;justify-content:center;gap:0;padding:0}
 .hist-totals-inner{display:flex;gap:0;border:1px solid var(--stats-border);border-radius:var(--radius);overflow:hidden;margin:12px auto;max-width:480px;width:100%}
@@ -102,7 +107,7 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
 .hist-total-lbl{font-size:9px;font-weight:700;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
 .hist-total-val{font-size:18px;font-weight:700;letter-spacing:-.5px;line-height:1}
 .hist-total-sub{font-size:9px;color:rgba(255,255,255,0.2);margin-top:2px;font-weight:500}
- 
+
 /* GRÁFICO */
 .chart-section{padding:1rem 2rem 1.25rem;background:var(--stats-bg);border-bottom:1px solid var(--stats-border)}
 .chart-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
@@ -115,7 +120,7 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
 .chart-trend-info{display:flex;align-items:center;gap:8px;padding:8px 12px;background:rgba(255,255,255,0.03);border-radius:8px;border:1px solid rgba(255,255,255,0.05);margin-top:10px}
 .cti-label{font-size:10px;color:rgba(255,255,255,0.35);font-weight:500}
 .cti-value{font-size:11px;font-weight:700}
- 
+
 /* SELEÇÃO ANO */
 .hist-select-section{padding:.75rem 2rem 1.25rem;background:var(--stats-bg)}
 .hist-select-title{font-size:11px;font-weight:700;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;display:flex;align-items:center;gap:8px}
@@ -136,7 +141,7 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
 .t-dropdown-item:hover{background:rgba(204,214,80,0.1);color:#fff}
 .t-dropdown-item.current{color:var(--dcarli);background:rgba(204,214,80,0.08)}
 .yc-status{font-size:9px;font-weight:700;padding:2px 8px;border-radius:99px;display:inline-block;margin-top:6px}
- 
+
 /* CRONOGRAMA */
 .cron-content{padding:1.5rem 2rem 3rem;display:flex;flex-direction:column;gap:1.5rem;max-width:900px;margin:0 auto;width:100%}
 .grupo-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
@@ -202,7 +207,7 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
 </style>
 </head>
 <body>
- 
+
 <!-- LOGIN -->
 <div class="auth-screen" id="auth-screen">
   <div class="auth-circle" style="width:320px;height:320px;top:-80px;right:-80px"></div>
@@ -216,9 +221,13 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
       <div class="auth-logo-icon" id="auth-logo-fallback">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="3" width="9" height="9" rx="2" fill="#CCD650" opacity=".9"/><rect x="16" y="3" width="9" height="9" rx="2" fill="#CCD650" opacity=".6"/><rect x="3" y="16" width="9" height="9" rx="2" fill="#CCD650" opacity=".6"/><rect x="16" y="16" width="9" height="9" rx="2" fill="#CCD650" opacity=".25"/></svg>
       </div>
-      <div class="auth-partner-name" id="auth-partner-name">Portal</div>
-      <div class="auth-title">Portal de Acompanhamento</div>
-      <div class="auth-divider"><span></span>Lei do Bem<span></span></div>
+      <div class="auth-logo-divider">
+        <div class="auth-logo-divider-line"></div>
+        <div class="auth-logo-divider-text" id="auth-partner-name">Portal</div>
+        <div class="auth-logo-divider-line"></div>
+      </div>
+      <div class="auth-title">Acesso cliente</div>
+      <div class="auth-sub">Lei do Bem — Acompanhamento do projeto</div>
     </div>
     <div class="auth-tabs">
       <button class="auth-tab active" id="tab-login" onclick="switchTab('login')">Entrar</button>
@@ -231,6 +240,8 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
       <input class="auth-input" type="password" id="login-password" placeholder="Sua senha" onkeydown="if(event.key==='Enter')doLogin()"/>
       <div class="auth-err" id="login-err">E-mail ou senha incorretos.</div>
       <button class="auth-btn" id="login-btn" onclick="doLogin()">Entrar</button>
+      <div class="auth-forgot">Esqueceu a senha? <a onclick="doResetPassword()">Redefinir acesso</a></div>
+      <div class="auth-reset-ok" id="reset-ok">E-mail de redefinição enviado! Verifique sua caixa de entrada.</div>
     </div>
     <div id="form-signup" style="display:none">
       <label class="auth-label">E-mail</label>
@@ -251,7 +262,7 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
   </div>
   <div class="auth-footer"><span>Powered by <strong style="color:rgba(204,214,80,0.6)">DCarli</strong></span></div>
 </div>
- 
+
 <!-- HISTÓRICO -->
 <div id="hist-screen" style="display:none;flex-direction:column;min-height:100vh">
   <div class="topbar">
@@ -267,7 +278,7 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
   <div id="hist-content"><div class="loading"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div></div>
   <div class="page-footer"><span>Powered by <strong>DCarli</strong></span></div>
 </div>
- 
+
 <!-- CRONOGRAMA -->
 <div id="cron-screen" style="display:none;flex-direction:column;min-height:100vh">
   <div class="topbar">
@@ -293,13 +304,13 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
   <div id="cron-content"><div class="loading"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div></div>
   <div class="page-footer"><span>Powered by <strong>DCarli</strong></span></div>
 </div>
- 
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script>
 const SUPABASE_URL  = "https://ywckzclxdbhlbgqpmtvc.supabase.co";
 const SUPABASE_KEY  = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3Y2t6Y2x4ZGJobGJncXBtdHZjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM2NzgwNTksImV4cCI6MjA4OTI1NDA1OX0.Cfxbis5sgn2pT7mnULlEfqW1In1OmDBxUUTHsP3H3Og";
 const PARCEIRO_SLUG = "global-innovation";
- 
+
 var accessToken   = sessionStorage.getItem("sb_token") || null;
 var todosClientes = JSON.parse(sessionStorage.getItem("sb_clientes") || "[]");
 var empresaSlug   = null;
@@ -308,14 +319,14 @@ var clienteLogoUrl= null;
 var histChart     = null;
 var histMode      = "disp";
 var histData      = null;
- 
+
 var currentClienteSlug = null;
- 
+
 function toggleChipDropdown(){
   var dd=document.getElementById("cron-chip-dropdown");
   if(dd) dd.classList.toggle("open");
 }
- 
+
 function buildChipDropdown(clientes, currentSlug){
   var dd=document.getElementById("cron-chip-dropdown");
   if(!dd) return;
@@ -326,13 +337,13 @@ function buildChipDropdown(clientes, currentSlug){
     '</div>';
   }).join("");
 }
- 
+
 function chipSelectAno(slug){
   var dd=document.getElementById("cron-chip-dropdown");
   if(dd) dd.classList.remove("open");
   if(slug!==currentClienteSlug) loadCronograma(slug);
 }
- 
+
 document.addEventListener("click",function(e){
   var wrap=document.getElementById("cron-chip-wrap");
   if(wrap&&!wrap.contains(e.target)){
@@ -340,7 +351,7 @@ document.addEventListener("click",function(e){
     if(dd) dd.classList.remove("open");
   }
 });
- 
+
 var GRUPOS = {
   contabil:{label:"Escopo Contábil",sub:"Apuração de dispêndios",cor:"#85B7EB",corBg:"rgba(24,95,165,0.2)",fill:"#378ADD",
     icon:'<svg width="14" height="14" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="2" stroke="#85B7EB" stroke-width="1.5"/><path d="M5 9h8M5 6h8M5 12h5" stroke="#85B7EB" stroke-width="1.2" stroke-linecap="round"/></svg>'},
@@ -349,7 +360,7 @@ var GRUPOS = {
   mcti:{label:"MCTI",sub:"Preenchimento e envio",cor:"#AFA9EC",corBg:"rgba(83,74,183,0.2)",fill:"#7F77DD",
     icon:'<svg width="14" height="14" viewBox="0 0 18 18" fill="none"><path d="M9 2l2 4h4l-3 3 1 4-4-2-4 2 1-4-3-3h4z" stroke="#AFA9EC" stroke-width="1.5" stroke-linejoin="round"/></svg>'}
 };
- 
+
 var MCTI_STATUS = {
   nao_enviado:            {label:"Não enviado",                     dot:"#5F5E5A",hint:"Aguardando encerramento do ano-base"},
   em_analise:             {label:"Em análise",                      dot:"#378ADD",hint:"Formulário enviado ao MCTI"},
@@ -361,20 +372,20 @@ var MCTI_STATUS = {
   aprovacao_total:        {label:"Aprovação total",                 dot:"#CCD650",hint:"Benefício integralmente aprovado"},
   reprovado_integralmente:{label:"Reprovado integralmente",         dot:"#E24B4A",hint:"Sem benefício neste ano-base"}
 };
- 
+
 function fmt(v){
   if(v>=1000000) return "R$ "+(v/1000000).toFixed(1).replace(".",",")+"M";
   if(v>=1000)    return "R$ "+(v/1000).toFixed(0)+"K";
   return "R$ "+Math.round(v);
 }
- 
+
 function sc(s){
   if(s==="done")        return {bg:"rgba(99,153,34,0.2)",  text:"#97C459",dot:"#639922",label:"Concluído"};
   if(s==="in-progress") return {bg:"rgba(55,138,221,0.2)", text:"#85B7EB",dot:"#378ADD",label:"Em andamento"};
   if(s==="delayed")     return {bg:"rgba(226,75,74,0.2)",  text:"#F09595",dot:"#E24B4A",label:"Em atraso"};
   return                       {bg:"rgba(255,255,255,0.06)",text:"rgba(255,255,255,0.35)",dot:"rgba(255,255,255,0.15)",label:"Pendente"};
 }
- 
+
 function stageStatus(ea){
   if(!ea.length) return "pending";
   if(ea.some(function(t){return t.status==="delayed";})) return "delayed";
@@ -383,7 +394,7 @@ function stageStatus(ea){
   if(done>0||ea.some(function(t){return t.status==="in-progress";})) return "in-progress";
   return "pending";
 }
- 
+
 // Regressão polinomial grau 3 via Gauss-Jordan
 function polyReg3(xs, ys){
   var deg=3, n=deg+1;
@@ -406,7 +417,7 @@ function polyReg3(xs, ys){
   for(var i=n-1;i>=0;i--){coeffs[i]=A[i][n]/A[i][i];for(var k=i-1;k>=0;k--)A[k][n]-=A[k][i]*coeffs[i];}
   return function(x){var t=(x-xMin)/(xMax-xMin);var y=0;for(var i=0;i<coeffs.length;i++)y+=coeffs[i]*Math.pow(t,i);return y;};
 }
- 
+
 function renderChart(mode){
   if(!histData) return;
   var anos=histData.anos, vals=mode==="disp"?histData.disp:histData.benef;
@@ -456,27 +467,27 @@ function renderChart(mode){
     }
   });
 }
- 
+
 function setChartMode(m){
   histMode=m;
   document.getElementById("chart-btn-d").className="chart-btn"+(m==="disp"?" active-d":"");
   document.getElementById("chart-btn-b").className="chart-btn"+(m==="benef"?" active-b":"");
   renderChart(m);
 }
- 
+
 async function fetchJSON(path,token){
   var res=await fetch(SUPABASE_URL+path,{headers:{"apikey":SUPABASE_KEY,"Authorization":"Bearer "+(token||SUPABASE_KEY)}});
   if(!res.ok) throw new Error("Erro "+res.status);
   return res.json();
 }
- 
+
 function setLogo(elId,url){
   if(!url) return;
   var el=document.getElementById(elId);
   if(!el) return;
   el.innerHTML='<img src="'+url+'" style="max-height:24px;max-width:110px;object-fit:contain;display:block"/>';
 }
- 
+
 async function loadParceiroInfo(){
   try{
     var arr=await fetchJSON("/rest/v1/parceiros?slug=eq."+PARCEIRO_SLUG+"&select=nome,logo_url");
@@ -484,10 +495,36 @@ async function loadParceiroInfo(){
     var p=arr[0]; parceiroNome=p.nome;
     document.getElementById("auth-partner-name").textContent=p.nome;
     document.title=p.nome+" | Portal de Acompanhamento";
-    if(p.logo_url){var img=document.getElementById("auth-logo-img");img.src=p.logo_url;img.style.display="block";document.getElementById("auth-logo-fallback").style.display="none";}
+    if(p.logo_url){
+      var img=document.getElementById("auth-logo-img");
+      img.src=p.logo_url; img.style.display="block";
+      document.getElementById("auth-logo-fallback").style.display="none";
+    }
   }catch(e){}
 }
- 
+
+async function doResetPassword(){
+  var email=document.getElementById("login-email").value.trim();
+  if(!email){
+    document.getElementById("login-err").textContent="Digite seu e-mail antes de redefinir a senha.";
+    document.getElementById("login-err").style.display="block";
+    return;
+  }
+  try{
+    await fetch(SUPABASE_URL+"/auth/v1/recover",{
+      method:"POST",
+      headers:{"apikey":SUPABASE_KEY,"Content-Type":"application/json"},
+      body:JSON.stringify({email:email})
+    });
+    document.getElementById("login-err").style.display="none";
+    document.getElementById("reset-ok").style.display="block";
+    setTimeout(function(){document.getElementById("reset-ok").style.display="none";},5000);
+  }catch(e){
+    document.getElementById("login-err").textContent="Erro ao enviar e-mail. Tente novamente.";
+    document.getElementById("login-err").style.display="block";
+  }
+}
+
 function switchTab(tab){
   var il=tab==="login";
   document.getElementById("tab-login").classList.toggle("active",il);
@@ -498,7 +535,7 @@ function switchTab(tab){
   document.getElementById("signup-err").style.display="none";
   document.getElementById("signup-ok").style.display="none";
 }
- 
+
 async function doLogin(){
   var email=document.getElementById("login-email").value.trim();
   var pass=document.getElementById("login-password").value;
@@ -522,7 +559,7 @@ async function doLogin(){
     err.style.display="block";btn.disabled=false;btn.textContent="Entrar";accessToken=null;
   }
 }
- 
+
 async function doSignup(){
   var email=document.getElementById("signup-email").value.trim();
   var pass=document.getElementById("signup-password").value;
@@ -542,7 +579,7 @@ async function doSignup(){
     ok.style.display="block";btn.disabled=false;btn.textContent="Criar conta";
   }catch(e){err.textContent=e.message;err.style.display="block";btn.disabled=false;btn.textContent="Criar conta";}
 }
- 
+
 function doLogout(){
   accessToken=null;todosClientes=[];empresaSlug=null;histData=null;histMode="disp";
   if(histChart){histChart.destroy();histChart=null;}
@@ -553,14 +590,14 @@ function doLogout(){
   document.getElementById("auth-screen").style.display="flex";
   document.getElementById("login-password").value="";
 }
- 
+
 function goBack(){
   if(histChart){histChart.destroy();histChart=null;}
   document.getElementById("cron-screen").style.display="none";
   document.getElementById("hist-screen").style.display="flex";
   setTimeout(function(){renderChart(histMode);},100);
 }
- 
+
 function toggleEtapa(id){
   var body=document.getElementById("ecb-"+id);
   var arrow=document.getElementById("eca-"+id);
@@ -568,7 +605,7 @@ function toggleEtapa(id){
   var open=body.classList.toggle("open");
   if(arrow) arrow.classList.toggle("open",open);
 }
- 
+
 async function showHistorico(){
   document.getElementById("hist-screen").style.display="flex";
   var content=document.getElementById("hist-content");
@@ -578,24 +615,25 @@ async function showHistorico(){
     var clientes=await fetchJSON("/rest/v1/clientes?slug=in.("+slugList+")&select=nome,slug,ano_base,empresa_slug,logo_url",accessToken);
     clientes.sort(function(a,b){return b.ano_base-a.ano_base;});
     var c0=clientes[0];
+    var nomeBase=c0.nome.replace(/\s*\d{4}$/, '').trim();
     empresaSlug=c0.empresa_slug||c0.slug;
     clienteLogoUrl=c0.logo_url;
-    document.getElementById("hist-t-name").textContent=c0.nome;
-    document.title=c0.nome+" | Lei do Bem";
+    document.getElementById("hist-t-name").textContent=nomeBase;
+    document.title=nomeBase+" | Lei do Bem";
     setLogo("hist-logo-card",clienteLogoUrl);
- 
+
     var hist=await fetchJSON("/rest/v1/historico_beneficio?empresa_slug=eq."+empresaSlug+"&order=ano.asc&select=*",accessToken);
     var totalD=hist.reduce(function(s,h){return s+Number(h.dispendio);},0);
     var totalB=hist.reduce(function(s,h){return s+Number(h.beneficio);},0);
     var anoIni=hist.length?hist[0].ano:"";
     var anoFim=hist.length?hist[hist.length-1].ano:"";
- 
+
     histData={
       anos:hist.map(function(h){return Number(h.ano);}),
       disp:hist.map(function(h){return Number(h.dispendio);}),
       benef:hist.map(function(h){return Number(h.beneficio);})
     };
- 
+
     var yearsHtml=clientes.map(function(c){
       var isAtual=c.ano_base==new Date().getFullYear();
       var sBg=isAtual?"rgba(204,214,80,0.15)":"rgba(55,138,221,0.15)";
@@ -603,7 +641,7 @@ async function showHistorico(){
       var sLbl=isAtual?"Atual":"Em andamento";
       return '<div class="year-card" onclick="loadCronograma(\''+c.slug+'\')"><div class="yc-label">Ano-base</div><div class="yc-year">'+c.ano_base+'</div><div class="yc-status" style="background:'+sBg+';color:'+sTx+'">'+sLbl+'</div></div>';
     }).join("");
- 
+
     content.innerHTML=
       '<div class="hero-section">'+
         '<div class="hero-circle" style="width:380px;height:380px;top:-180px;right:-80px"></div>'+
@@ -611,7 +649,7 @@ async function showHistorico(){
         '<div style="position:absolute;top:24px;right:220px;width:4px;height:4px;border-radius:50%;background:rgba(204,214,80,0.25);z-index:1"></div>'+
         '<div class="hero-inner">'+
           '<div class="hero-eyebrow"><div class="hero-eyebrow-line"></div>Histórico do benefício</div>'+
-          '<div class="hero-name">'+c0.nome+'</div>'+
+          '<div class="hero-name">'+nomeBase+'</div>'+
           '<div class="hero-since">Lei do Bem · Desde <strong>'+anoIni+'</strong> · '+parceiroNome+'</div>'+
         '</div>'+
       '</div>'+
@@ -642,13 +680,13 @@ async function showHistorico(){
         '<div class="hist-select-title">Selecione o ano-base para acompanhar<div class="hist-select-line"></div></div>'+
         '<div class="year-grid">'+yearsHtml+'</div>'+
       '</div>';
- 
+
     setTimeout(function(){renderChart(histMode);},100);
   }catch(e){
     content.innerHTML='<div class="error-box">Erro ao carregar histórico: '+e.message+'</div>';
   }
 }
- 
+
 async function loadCronograma(clienteSlug){
   if(histChart){histChart.destroy();histChart=null;}
   document.getElementById("hist-screen").style.display="none";
@@ -690,7 +728,7 @@ async function loadCronograma(clienteSlug){
     var hasDelayed =itens.some(function(i){return i.status==="delayed";});
     var emAnd      =etapas.filter(function(e){var ea=atividades.filter(function(a){return a.etapa_id===e.id;});return stageStatus(ea)==="in-progress";}).length;
     var doneStages =etapas.filter(function(e){var ea=atividades.filter(function(a){return a.etapa_id===e.id;});return stageStatus(ea)==="done";}).length;
- 
+
     var gruposHtml=["contabil","tecnico","mcti"].map(function(gk){
       var g=GRUPOS[gk];
       var etG=etapas.filter(function(e){return e.grupo===gk;});
@@ -722,11 +760,11 @@ async function loadCronograma(clienteSlug){
       }).join("");
       return '<div class="grupo-wrap"><div class="grupo-head"><div class="grupo-icon" style="background:'+g.corBg+'">'+g.icon+'</div><div class="grupo-info"><div class="grupo-title">'+g.label+'</div><div class="grupo-subtitle">'+g.sub+'</div></div><div class="grupo-pct">'+pctG+'%</div></div>'+etapasHtml+'</div>';
     }).join("");
- 
+
     var alertHtml="";
     if(pendDocs>0) alertHtml+='<div class="alert-warn"><div style="width:5px;height:5px;border-radius:50%;background:#EF9F27;flex-shrink:0"></div>Existem documentos pendentes que precisam ser enviados.</div>';
     if(hasDelayed)  alertHtml+='<div class="alert-danger"><div style="width:5px;height:5px;border-radius:50%;background:#E24B4A;flex-shrink:0"></div>Existem itens em atraso que precisam de atenção.</div>';
- 
+
     content.innerHTML=
       '<div class="hero-section">'+
         '<div class="hero-circle" style="width:380px;height:380px;top:-180px;right:-80px"></div>'+
@@ -745,12 +783,12 @@ async function loadCronograma(clienteSlug){
       '</div></div>'+
       '<div class="prog-bar"><div class="prog-lbl">Progresso geral</div><div class="prog-track"><div class="prog-fill" style="width:'+pct+'%"></div></div><div class="prog-pct">'+pct+'%</div></div>'+
       '<div class="cron-content">'+(alertHtml?'<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:8px">'+alertHtml+'</div>':'')+gruposHtml+'</div>';
- 
+
   }catch(e){
     content.innerHTML='<div class="error-box">Erro ao carregar cronograma: '+e.message+'</div>';
   }
 }
- 
+
 loadParceiroInfo();
 if(accessToken&&todosClientes.length){
   document.getElementById("auth-screen").style.display="none";
