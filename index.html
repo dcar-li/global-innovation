@@ -9,13 +9,6 @@
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
   --dcarli:#CCD650;--dcarli-dark:#1a1f0e;--dcarli-text:#8a9118;--dcarli-light:#f5f7d9;
-  --blue:#185FA5;--blue-light:#E6F1FB;--blue-mid:#378ADD;
-  --green:#3B6D11;--green-light:#EAF3DE;--green-mid:#639922;
-  --amber:#BA7517;--amber-light:#FAEEDA;
-  --red:#A32D2D;--red-light:#FCEBEB;--red-mid:#E24B4A;
-  --teal:#0F6E56;--teal-light:#E1F5EE;--teal-mid:#1D9E75;
-  --purple:#534AB7;--purple-light:#EEEDFE;--purple-mid:#7F77DD;
-  --text:#1a1a18;--text-sec:#6b6b67;--text-hint:#9e9e9a;
   --bg:#222220;--surface:#1e2418;--border:rgba(255,255,255,0.07);
   --stats-bg:#1e1e1c;--stats-border:rgba(255,255,255,0.06);
   --radius:10px;--radius-lg:14px;
@@ -26,15 +19,14 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
 /* TOPBAR */
 .topbar{background:var(--dcarli-dark);height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;position:sticky;top:0;z-index:100;border-bottom:2px solid var(--dcarli)}
 .t-left{display:flex;align-items:center;gap:10px}
-.t-logo{background:var(--dcarli-light);border-radius:6px;width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.t-logo img{max-height:22px;max-width:22px;object-fit:contain;display:none}
-.t-logo-fallback{width:16px;height:16px}
+.t-logo{background:var(--dcarli-light);border-radius:6px;width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}
+.t-logo img{max-height:24px;max-width:24px;object-fit:contain}
 .t-name{color:#fff;font-size:13px;font-weight:700}
 .t-sub{color:rgba(204,214,80,0.5);font-size:10px;font-weight:600;margin-top:1px}
 .t-right{display:flex;align-items:center;gap:6px}
 .t-chip{background:rgba(204,214,80,0.12);border:1px solid rgba(204,214,80,0.25);color:var(--dcarli);font-size:10px;font-weight:700;padding:4px 10px;border-radius:99px}
 .t-btn{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);font-size:10px;font-weight:600;padding:4px 10px;border-radius:6px;cursor:pointer;font-family:'Quicksand',sans-serif}
-.t-btn:hover{background:rgba(255,255,255,0.1)}
+.t-btn:hover{background:rgba(255,255,255,0.12)}
 
 /* AUTH */
 .auth-screen{min-height:100vh;background:var(--dcarli-dark);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;position:relative;overflow:hidden}
@@ -45,78 +37,38 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
 .auth-logo-icon{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;background:var(--dcarli-light);border-radius:12px;margin-bottom:1rem}
 .auth-logo-img-el{max-height:52px;max-width:180px;object-fit:contain;display:none;margin:0 auto 1rem}
 .auth-partner-name{font-size:12px;font-weight:700;color:var(--dcarli-text);letter-spacing:.8px;text-transform:uppercase;margin-bottom:6px}
-.auth-title{font-size:18px;font-weight:700;color:var(--text);margin-bottom:6px}
-.auth-divider{display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px;color:var(--text-hint)}
+.auth-title{font-size:18px;font-weight:700;color:#1a1a18;margin-bottom:6px}
+.auth-divider{display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px;color:#9e9e9a}
 .auth-divider span{width:20px;height:1px;background:#e2e1db;display:inline-block}
 .auth-tabs{display:flex;background:#F1EFE8;border-radius:8px;padding:3px;gap:2px;margin:1.25rem 0}
-.auth-tab{flex:1;font-size:13px;font-weight:600;padding:6px;border-radius:6px;border:none;background:transparent;color:var(--text-sec);cursor:pointer;font-family:'Quicksand',sans-serif}
+.auth-tab{flex:1;font-size:13px;font-weight:600;padding:6px;border-radius:6px;border:none;background:transparent;color:#6b6b67;cursor:pointer;font-family:'Quicksand',sans-serif}
 .auth-tab.active{background:#fff;color:var(--dcarli-text);box-shadow:0 1px 3px rgba(0,0,0,.08)}
-.auth-label{font-size:12px;font-weight:600;color:var(--text-sec);margin-bottom:5px;display:block}
-.auth-input{width:100%;padding:9px 12px;border:1px solid #e2e1db;border-radius:var(--radius);font-size:14px;background:#f7f6f2;color:var(--text);font-family:'Quicksand',sans-serif;margin-bottom:12px;font-weight:500}
+.auth-label{font-size:12px;font-weight:600;color:#6b6b67;margin-bottom:5px;display:block}
+.auth-input{width:100%;padding:9px 12px;border:1px solid #e2e1db;border-radius:var(--radius);font-size:14px;background:#f7f6f2;color:#1a1a18;font-family:'Quicksand',sans-serif;margin-bottom:12px;font-weight:500}
 .auth-input:focus{outline:none;border-color:var(--dcarli)}
-.auth-hint{font-size:11px;color:var(--text-hint);margin:-8px 0 10px;font-weight:500}
+.auth-hint{font-size:11px;color:#9e9e9a;margin:-8px 0 10px;font-weight:500}
 .auth-btn{width:100%;padding:10px;background:var(--dcarli);color:var(--dcarli-dark);border:none;border-radius:var(--radius);font-size:14px;font-weight:700;cursor:pointer;font-family:'Quicksand',sans-serif;margin-top:4px}
 .auth-btn:hover{opacity:.9}
 .auth-btn:disabled{opacity:.5;cursor:not-allowed}
 .auth-err{font-size:12px;color:#A32D2D;margin-top:8px;display:none;line-height:1.5;font-weight:500}
 .auth-ok{font-size:12px;color:#3B6D11;margin-top:8px;display:none;line-height:1.5;background:#EAF3DE;padding:8px 10px;border-radius:8px;font-weight:500}
 .auth-security{margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid #F1EFE8;display:flex;align-items:center;justify-content:center;gap:6px}
-.auth-security span{font-size:11px;color:var(--text-hint);font-weight:500}
+.auth-security span{font-size:11px;color:#9e9e9a;font-weight:500}
 .auth-footer{margin-top:1.5rem;text-align:center;position:relative;z-index:1}
 .auth-footer span{font-size:11px;color:rgba(204,214,80,0.45);font-weight:600}
 
-/* HISTÓRICO */
-.hist-screen{display:none;flex-direction:column;min-height:100vh}
-.hist-hero{background:var(--dcarli-dark);padding:2rem 2rem 2.5rem;position:relative;overflow:hidden}
-.hist-hero-circle{position:absolute;border-radius:50%;border:1px solid rgba(204,214,80,0.07)}
-.hist-hero-inner{position:relative;z-index:1}
-.hist-eyebrow{font-size:10px;font-weight:700;color:rgba(204,214,80,0.6);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;display:flex;align-items:center;gap:6px}
-.hist-eyebrow-line{width:20px;height:1px;background:rgba(204,214,80,0.3)}
-.hist-name{font-size:36px;font-weight:700;color:#fff;letter-spacing:-1px;line-height:1;margin-bottom:6px}
-.hist-since{font-size:13px;color:rgba(255,255,255,0.35);font-weight:500}
-.hist-since strong{color:rgba(204,214,80,0.6);font-weight:700}
+/* HERO */
+.hero-section{background:var(--dcarli-dark);padding:2rem 2rem 2.5rem;position:relative;overflow:hidden}
+.hero-circle{position:absolute;border-radius:50%;border:1px solid rgba(204,214,80,0.07)}
+.hero-inner{position:relative;z-index:1}
+.hero-eyebrow{font-size:10px;font-weight:700;color:rgba(204,214,80,0.6);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.hero-eyebrow-line{width:20px;height:1px;background:rgba(204,214,80,0.3)}
+.hero-name{font-size:36px;font-weight:700;color:#fff;letter-spacing:-1px;line-height:1;margin-bottom:6px}
+.hero-since{font-size:13px;color:rgba(255,255,255,0.35);font-weight:500}
+.hero-since strong{color:rgba(204,214,80,0.6);font-weight:700}
 
-.hist-totals{background:var(--stats-bg);border-bottom:1px solid var(--stats-border);display:grid;grid-template-columns:1fr 1fr;border-left:1px solid var(--stats-border)}
-.hist-total{padding:18px 2rem;border-right:1px solid var(--stats-border);position:relative}
-.hist-total-line{position:absolute;top:0;left:0;right:0;height:3px}
-.hist-total-lbl{font-size:9px;font-weight:700;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px}
-.hist-total-val{font-size:28px;font-weight:700;letter-spacing:-.5px;line-height:1}
-.hist-total-sub{font-size:10px;color:rgba(255,255,255,0.25);margin-top:4px;font-weight:500}
-
-.hist-chart-section{padding:1.5rem 2rem}
-.hist-chart-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem}
-.hist-chart-title{font-size:13px;font-weight:700;color:#fff}
-.hist-legend{display:flex;align-items:center;gap:14px}
-.hist-legend-item{display:flex;align-items:center;gap:5px;font-size:10px;color:rgba(255,255,255,0.4);font-weight:600}
-.hist-legend-dot{width:8px;height:8px;border-radius:2px}
-.hist-chart-wrap{position:relative;height:160px;margin-bottom:8px}
-.hist-chart-lines{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none}
-.hist-chart-line{border-top:1px dashed rgba(255,255,255,0.05);width:100%}
-.hist-chart-bars{position:absolute;inset:0;display:flex;align-items:flex-end;gap:8px;padding:0 4px}
-.hist-bar-group{flex:1;display:flex;align-items:flex-end;gap:3px}
-.hist-bar{border-radius:4px 4px 0 0}
-.hist-bar-d{background:rgba(55,138,221,0.55)}
-.hist-bar-b{background:rgba(204,214,80,0.65)}
-.hist-chart-labels{display:flex;padding:0 4px;gap:8px}
-.hist-chart-label{flex:1;text-align:center;font-size:10px;color:rgba(255,255,255,0.3);font-weight:600;padding-top:6px}
-
-.hist-select-section{padding:0 2rem 2rem}
-.hist-select-title{font-size:11px;font-weight:700;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
-.hist-select-line{flex:1;height:1px;background:rgba(255,255,255,0.08)}
-.year-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}
-.year-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px;text-align:center;cursor:pointer;transition:all .2s}
-.year-card:hover{border-color:rgba(204,214,80,0.3);background:#212618}
-.yc-label{font-size:9px;font-weight:700;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px}
-.yc-year{font-size:24px;font-weight:700;color:#fff;letter-spacing:-.5px}
-.yc-status{font-size:9px;font-weight:700;padding:2px 8px;border-radius:99px;display:inline-block;margin-top:6px}
-
-/* CRONOGRAMA */
-.cron-screen{display:none;flex-direction:column;min-height:100vh}
-.cron-hero{background:var(--dcarli-dark);padding:2rem 2rem 2.5rem;position:relative;overflow:hidden}
-.cron-hero-circle{position:absolute;border-radius:50%;border:1px solid rgba(204,214,80,0.07)}
+/* CRON HERO */
 .cron-hero-grid{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;position:relative;z-index:1}
-.cron-eyebrow{font-size:10px;font-weight:700;color:rgba(204,214,80,0.6);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;display:flex;align-items:center;gap:6px}
-.cron-eyebrow-line{width:20px;height:1px;background:rgba(204,214,80,0.3)}
 .cron-anobase{font-size:36px;font-weight:700;color:#fff;letter-spacing:-1px;line-height:1;margin-bottom:8px}
 .cron-anobase span{color:var(--dcarli)}
 .cron-desc{font-size:13px;color:rgba(255,255,255,0.35);font-weight:500}
@@ -127,6 +79,7 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
 .mcti-val{font-size:15px;font-weight:700;color:#fff}
 .mcti-hint{font-size:10px;color:rgba(255,255,255,0.25);margin-top:3px}
 
+/* STATS */
 .stats-bar{background:var(--stats-bg);border-bottom:1px solid var(--stats-border)}
 .stats-inner{display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid var(--stats-border)}
 .stat{padding:14px 18px;border-right:1px solid var(--stats-border);position:relative}
@@ -141,43 +94,97 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
 .prog-fill{height:100%;background:linear-gradient(90deg,var(--dcarli),var(--dcarli-text));border-radius:99px;transition:width .5s cubic-bezier(.4,0,.2,1)}
 .prog-pct{font-size:12px;font-weight:700;color:var(--dcarli-text);white-space:nowrap}
 
+/* HISTÓRICO */
+.hist-totals{background:var(--stats-bg);border-bottom:1px solid var(--stats-border);display:grid;grid-template-columns:1fr 1fr;border-left:1px solid var(--stats-border)}
+.hist-total{padding:14px 2rem;border-right:1px solid var(--stats-border);position:relative}
+.hist-total-line{position:absolute;top:0;left:0;right:0;height:3px}
+.hist-total-lbl{font-size:9px;font-weight:700;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px}
+.hist-total-val{font-size:24px;font-weight:700;letter-spacing:-.5px;line-height:1}
+.hist-total-sub{font-size:10px;color:rgba(255,255,255,0.25);margin-top:3px;font-weight:500}
+
+.hist-chart-section{padding:1rem 2rem 1.25rem}
+.hist-chart-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.hist-chart-title{font-size:13px;font-weight:700;color:#fff}
+.hist-legend{display:flex;align-items:center;gap:14px}
+.hist-legend-item{display:flex;align-items:center;gap:5px;font-size:10px;color:rgba(255,255,255,0.4);font-weight:600}
+.hist-legend-dot{width:8px;height:8px;border-radius:2px}
+.hist-chart-wrap{position:relative;height:140px;margin-bottom:6px;background:rgba(255,255,255,0.02);border-radius:8px;overflow:hidden}
+.hist-chart-lines{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none;padding:8px 0}
+.hist-chart-line{border-top:1px dashed rgba(255,255,255,0.05);width:100%}
+.hist-chart-bars{position:absolute;bottom:0;left:0;right:0;top:0;display:flex;align-items:flex-end;gap:12px;padding:8px 16px 0}
+.hist-bar-group{flex:1;display:flex;align-items:flex-end;gap:4px;height:100%}
+.hist-bar{border-radius:4px 4px 0 0;min-width:0;flex:1}
+.hist-bar-d{background:rgba(55,138,221,0.6)}
+.hist-bar-b{background:rgba(204,214,80,0.7)}
+.hist-chart-labels{display:flex;padding:4px 16px 0;gap:12px}
+.hist-chart-label{flex:1;text-align:center;font-size:10px;color:rgba(255,255,255,0.3);font-weight:600}
+
+.hist-select-section{padding:0 2rem 2rem}
+.hist-select-title{font-size:11px;font-weight:700;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.hist-select-line{flex:1;height:1px;background:rgba(255,255,255,0.08)}
+.year-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+.year-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px;text-align:center;cursor:pointer;transition:all .2s}
+.year-card:hover{border-color:rgba(204,214,80,0.3);background:#212618}
+.yc-label{font-size:9px;font-weight:700;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px}
+.yc-year{font-size:24px;font-weight:700;color:#fff;letter-spacing:-.5px}
+.yc-status{font-size:9px;font-weight:700;padding:2px 8px;border-radius:99px;display:inline-block;margin-top:6px}
+
+/* CRONOGRAMA */
 .cron-content{padding:1.5rem 2rem 3rem;display:flex;flex-direction:column;gap:1.5rem;max-width:900px;margin:0 auto;width:100%}
 
-.grupo-wrap{}
-.grupo-head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-.grupo-icon{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.grupo-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.grupo-head{display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.grupo-icon{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .grupo-info{flex:1}
-.grupo-title{font-size:13px;font-weight:700;color:#fff}
+.grupo-title{font-size:12px;font-weight:700;color:#fff}
 .grupo-subtitle{font-size:10px;color:rgba(255,255,255,0.3);font-weight:500}
-.grupo-line{flex:1;height:1px;background:rgba(255,255,255,0.08)}
-.grupo-badge{font-size:10px;font-weight:700;color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.06);padding:3px 8px;border-radius:99px}
+.grupo-pct{font-size:10px;font-weight:700;color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.06);padding:2px 8px;border-radius:99px}
 
-.cards-grid{display:flex;flex-direction:column;gap:4px}
-.etapa-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:12px 16px;cursor:pointer;transition:all .2s}
-.etapa-card:hover{border-color:rgba(204,214,80,0.15)}
-.etapa-card.delayed{border-color:rgba(226,75,74,0.3)}
-.ec-top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-.ec-num{width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0}
-.ec-name{flex:1;font-size:12px;font-weight:600;color:#fff}
-.ec-badge{font-size:9px;font-weight:700;padding:2px 8px;border-radius:99px}
-.ec-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:99px;overflow:hidden}
-.ec-fill{height:100%;border-radius:99px;transition:width .4s}
-.ec-meta{display:flex;justify-content:space-between;align-items:center;margin-top:5px}
-.ec-acts{font-size:10px;color:rgba(255,255,255,0.3);font-weight:500}
-.ec-date{font-size:10px;color:rgba(255,255,255,0.2);font-weight:500}
+.etapa{border-bottom:1px solid rgba(255,255,255,0.04);position:relative}
+.etapa:last-child{border-bottom:none}
+.etapa-bar{position:absolute;left:0;top:0;bottom:0;width:3px}
+.etapa-row{display:flex;align-items:center;gap:8px;padding:8px 14px 6px 16px;cursor:pointer;user-select:none}
+.etapa-num{width:20px;height:20px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0}
+.etapa-info{flex:1;min-width:0}
+.etapa-name{font-size:11px;font-weight:600;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.etapa-prog-row{display:flex;align-items:center;gap:5px;margin-top:3px}
+.etapa-track{flex:1;height:2px;background:rgba(255,255,255,0.06);border-radius:99px;overflow:hidden}
+.etapa-fill{height:100%;border-radius:99px;transition:width .4s}
+.etapa-pct{font-size:9px;color:rgba(255,255,255,0.25);font-weight:600;white-space:nowrap}
+.etapa-right{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.etapa-date{font-size:9px;color:rgba(255,255,255,0.2);font-weight:500}
+.etapa-badge{font-size:9px;font-weight:700;padding:2px 7px;border-radius:99px;white-space:nowrap}
+.etapa-arrow{font-size:9px;color:rgba(255,255,255,0.2);margin-left:2px;transition:transform .2s}
+.etapa-arrow.open{transform:rotate(180deg)}
 
-.ec-body{display:none;border-top:1px solid rgba(255,255,255,0.06);margin-top:10px;padding-top:10px}
-.ec-body.open{display:block}
-.ec-section-lbl{font-size:9px;font-weight:700;color:rgba(255,255,255,0.25);text-transform:uppercase;letter-spacing:.8px;margin:8px 0 5px}
-.ec-item{display:flex;align-items:center;gap:7px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
-.ec-item:last-child{border-bottom:none}
-.ec-item-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
-.ec-item-name{flex:1;font-size:11px;color:rgba(255,255,255,0.55);font-weight:500}
-.ec-item-badge{font-size:9px;font-weight:600;padding:2px 6px;border-radius:99px}
-.dl-btn{display:inline-flex;align-items:center;gap:3px;font-size:9px;font-weight:700;padding:2px 7px;border-radius:99px;background:rgba(204,214,80,0.1);color:var(--dcarli);border:1px solid rgba(204,214,80,0.2);text-decoration:none;margin-right:4px}
+.etapa-body{background:rgba(0,0,0,0.2);padding:6px 14px 8px 56px;display:none;flex-direction:column;gap:0;position:relative}
+.etapa-body.open{display:flex}
+.etapa-body:before{content:'';position:absolute;left:42px;top:0;bottom:8px;width:1px;background:rgba(255,255,255,0.07)}
+
+.ativ{display:flex;align-items:flex-start;gap:8px;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.03);position:relative}
+.ativ:last-child{border-bottom:none}
+.ativ:before{content:'';position:absolute;left:-20px;top:8px;width:12px;height:1px;background:rgba(255,255,255,0.07)}
+.ativ-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0;margin-top:4px}
+.ativ-name{flex:1;font-size:10px;color:rgba(255,255,255,0.45);font-weight:500;line-height:1.4}
+.ativ-badge{font-size:9px;font-weight:600;padding:1px 6px;border-radius:99px;white-space:nowrap;flex-shrink:0;margin-top:1px}
+
+.doc-row{display:flex;align-items:flex-start;gap:8px;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.03);position:relative}
+.doc-row:last-child{border-bottom:none}
+.doc-row:before{content:'';position:absolute;left:-20px;top:8px;width:12px;height:1px;background:rgba(255,255,255,0.07)}
+.doc-name{flex:1;font-size:10px;color:rgba(255,255,255,0.45);font-weight:500;line-height:1.4}
+.doc-right{display:flex;align-items:center;gap:5px;flex-shrink:0;margin-top:1px}
+.dl-btn{display:inline-flex;align-items:center;gap:3px;font-size:9px;font-weight:700;padding:1px 7px;border-radius:99px;background:rgba(204,214,80,0.1);color:var(--dcarli);border:1px solid rgba(204,214,80,0.2);text-decoration:none}
 .dl-btn svg{width:9px;height:9px}
 
-.page-footer{text-align:center;padding:1rem;border-top:1px solid rgba(255,255,255,0.06);margin-top:auto}
+.sec-lbl{font-size:9px;font-weight:700;color:rgba(255,255,255,0.2);text-transform:uppercase;letter-spacing:.8px;padding:8px 0 4px;margin-left:-20px}
+
+.note-box{margin-top:6px;padding:7px 10px;background:rgba(55,138,221,0.1);border-radius:6px;font-size:10px;color:rgba(255,255,255,0.45);border-left:2px solid rgba(55,138,221,0.4);line-height:1.5;margin-left:-20px}
+
+/* ALERTS */
+.alert-warn{background:rgba(186,117,23,0.12);border:1px solid rgba(239,159,39,0.25);border-radius:8px;padding:9px 14px;font-size:12px;color:#EF9F27;display:flex;align-items:center;gap:7px;font-weight:500}
+.alert-danger{background:rgba(226,75,74,0.12);border:1px solid rgba(240,149,149,0.25);border-radius:8px;padding:9px 14px;font-size:12px;color:#F09595;display:flex;align-items:center;gap:7px;font-weight:500}
+
+.page-footer{text-align:center;padding:1rem;border-top:1px solid rgba(255,255,255,0.06)}
 .page-footer span{font-size:10px;color:rgba(255,255,255,0.2);font-weight:600}
 .page-footer strong{color:var(--dcarli-text)}
 
@@ -251,30 +258,26 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
 </div>
 
 <!-- HISTÓRICO -->
-<div class="hist-screen" id="hist-screen">
+<div id="hist-screen" style="display:none;flex-direction:column;min-height:100vh">
   <div class="topbar">
     <div class="t-left">
       <div class="t-logo" id="hist-t-logo">
-        <svg class="t-logo-fallback" viewBox="0 0 28 28" fill="none"><rect x="3" y="3" width="9" height="9" rx="2" fill="#CCD650" opacity=".9"/><rect x="16" y="3" width="9" height="9" rx="2" fill="#CCD650" opacity=".6"/><rect x="3" y="16" width="9" height="9" rx="2" fill="#CCD650" opacity=".6"/><rect x="16" y="16" width="9" height="9" rx="2" fill="#CCD650" opacity=".25"/></svg>
+        <svg width="16" height="16" viewBox="0 0 28 28" fill="none"><rect x="3" y="3" width="9" height="9" rx="2" fill="#CCD650" opacity=".9"/><rect x="16" y="3" width="9" height="9" rx="2" fill="#CCD650" opacity=".6"/><rect x="3" y="16" width="9" height="9" rx="2" fill="#CCD650" opacity=".6"/><rect x="16" y="16" width="9" height="9" rx="2" fill="#CCD650" opacity=".25"/></svg>
       </div>
       <div><div class="t-name" id="hist-t-name">Carregando...</div><div class="t-sub">Lei do Bem</div></div>
     </div>
-    <div class="t-right">
-      <button class="t-btn" onclick="doLogout()">Sair</button>
-    </div>
+    <div class="t-right"><button class="t-btn" onclick="doLogout()">Sair</button></div>
   </div>
-  <div id="hist-content">
-    <div class="loading"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div>
-  </div>
+  <div id="hist-content"><div class="loading"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div></div>
   <div class="page-footer"><span>Powered by <strong>DCarli</strong></span></div>
 </div>
 
 <!-- CRONOGRAMA -->
-<div class="cron-screen" id="cron-screen">
+<div id="cron-screen" style="display:none;flex-direction:column;min-height:100vh">
   <div class="topbar">
     <div class="t-left">
       <div class="t-logo" id="cron-t-logo">
-        <svg class="t-logo-fallback" viewBox="0 0 28 28" fill="none"><rect x="3" y="3" width="9" height="9" rx="2" fill="#CCD650" opacity=".9"/><rect x="16" y="3" width="9" height="9" rx="2" fill="#CCD650" opacity=".6"/><rect x="3" y="16" width="9" height="9" rx="2" fill="#CCD650" opacity=".6"/><rect x="16" y="16" width="9" height="9" rx="2" fill="#CCD650" opacity=".25"/></svg>
+        <svg width="16" height="16" viewBox="0 0 28 28" fill="none"><rect x="3" y="3" width="9" height="9" rx="2" fill="#CCD650" opacity=".9"/><rect x="16" y="3" width="9" height="9" rx="2" fill="#CCD650" opacity=".6"/><rect x="3" y="16" width="9" height="9" rx="2" fill="#CCD650" opacity=".6"/><rect x="16" y="16" width="9" height="9" rx="2" fill="#CCD650" opacity=".25"/></svg>
       </div>
       <div><div class="t-name" id="cron-t-name">Carregando...</div><div class="t-sub" id="cron-t-sub">Lei do Bem</div></div>
     </div>
@@ -284,427 +287,382 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
       <button class="t-btn" onclick="doLogout()">Sair</button>
     </div>
   </div>
-  <div id="cron-content">
-    <div class="loading"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div>
-  </div>
+  <div id="cron-content"><div class="loading"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div></div>
   <div class="page-footer"><span>Powered by <strong>DCarli</strong></span></div>
 </div>
 
 <script>
-const SUPABASE_URL  = "https://ywckzclxdbhlbgqpmtvc.supabase.co";
+const SUPABASE_URL  = "https://ywckzclxdbhlbgqpmtvc.supabase.co"";
 const SUPABASE_KEY  = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3Y2t6Y2x4ZGJobGJncXBtdHZjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM2NzgwNTksImV4cCI6MjA4OTI1NDA1OX0.Cfxbis5sgn2pT7mnULlEfqW1In1OmDBxUUTHsP3H3Og";
 const PARCEIRO_SLUG = "global-innovation";
 
-var accessToken = sessionStorage.getItem("sb_token") || null;
-var todosClientes = JSON.parse(sessionStorage.getItem("sb_clientes") || "[]");
-var empresaSlug = null;
-var parceiroNome = "";
+var accessToken    = sessionStorage.getItem("sb_token") || null;
+var todosClientes  = JSON.parse(sessionStorage.getItem("sb_clientes") || "[]");
+var empresaSlug    = null;
+var parceiroNome   = "";
 var clienteLogoUrl = null;
 
 var GRUPOS = {
-  contabil: {label:"Escopo Contábil", sub:"Apuração de dispêndios", cor:"#85B7EB", corBg:"rgba(24,95,165,0.2)", fill:"#378ADD",
+  contabil:{label:"Escopo Contábil",sub:"Apuração de dispêndios",cor:"#85B7EB",corBg:"rgba(24,95,165,0.2)",fill:"#378ADD",
     icon:'<svg width="14" height="14" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="2" stroke="#85B7EB" stroke-width="1.5"/><path d="M5 9h8M5 6h8M5 12h5" stroke="#85B7EB" stroke-width="1.2" stroke-linecap="round"/></svg>'},
-  tecnico: {label:"Escopo Técnico", sub:"Coleta e elaboração do relatório", cor:"#5DCAA5", corBg:"rgba(15,110,86,0.2)", fill:"#1D9E75",
+  tecnico:{label:"Escopo Técnico",sub:"Coleta e elaboração do relatório",cor:"#5DCAA5",corBg:"rgba(15,110,86,0.2)",fill:"#1D9E75",
     icon:'<svg width="14" height="14" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#5DCAA5" stroke-width="1.5"/><path d="M6 9l2 2 4-4" stroke="#5DCAA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'},
-  mcti: {label:"MCTI", sub:"Preenchimento e envio", cor:"#AFA9EC", corBg:"rgba(83,74,183,0.2)", fill:"#7F77DD",
+  mcti:{label:"MCTI",sub:"Preenchimento e envio",cor:"#AFA9EC",corBg:"rgba(83,74,183,0.2)",fill:"#7F77DD",
     icon:'<svg width="14" height="14" viewBox="0 0 18 18" fill="none"><path d="M9 2l2 4h4l-3 3 1 4-4-2-4 2 1-4-3-3h4z" stroke="#AFA9EC" stroke-width="1.5" stroke-linejoin="round"/></svg>'}
 };
 
 var MCTI_STATUS = {
-  nao_enviado:            {label:"Não enviado",                     bg:"rgba(255,255,255,0.06)", text:"rgba(255,255,255,0.5)",  dot:"#5F5E5A"},
-  em_analise:             {label:"Em análise",                      bg:"rgba(55,138,221,0.15)",  text:"#85B7EB",               dot:"#378ADD"},
-  contest_parcial:        {label:"Contestação — aprovação parcial", bg:"rgba(186,117,23,0.15)",  text:"#EF9F27",               dot:"#BA7517"},
-  contest_reprovado:      {label:"Contestação — reprovação total",  bg:"rgba(162,45,45,0.15)",   text:"#F09595",               dot:"#E24B4A"},
-  recurso_parcial:        {label:"Recurso — aprovação parcial",     bg:"rgba(186,117,23,0.15)",  text:"#EF9F27",               dot:"#BA7517"},
-  recurso_reprovado:      {label:"Recurso — reprovação total",      bg:"rgba(162,45,45,0.15)",   text:"#F09595",               dot:"#E24B4A"},
-  aprovacao_parcial:      {label:"Aprovação parcial final",         bg:"rgba(99,153,34,0.15)",   text:"#97C459",               dot:"#639922"},
-  aprovacao_total:        {label:"Aprovação total",                 bg:"rgba(99,153,34,0.2)",    text:"#CCD650",               dot:"#8a9118"},
-  reprovado_integralmente:{label:"Reprovado integralmente",         bg:"rgba(162,45,45,0.2)",    text:"#F09595",               dot:"#E24B4A"}
+  nao_enviado:            {label:"Não enviado",                     dot:"#5F5E5A",hint:"Aguardando encerramento do ano-base"},
+  em_analise:             {label:"Em análise",                      dot:"#378ADD",hint:"Formulário enviado ao MCTI"},
+  contest_parcial:        {label:"Contestação — aprovação parcial", dot:"#BA7517",hint:"Recurso em andamento"},
+  contest_reprovado:      {label:"Contestação — reprovação total",  dot:"#E24B4A",hint:"Recurso em andamento"},
+  recurso_parcial:        {label:"Recurso — aprovação parcial",     dot:"#BA7517",hint:"Aguardando decisão final"},
+  recurso_reprovado:      {label:"Recurso — reprovação total",      dot:"#E24B4A",hint:"Aguardando decisão final"},
+  aprovacao_parcial:      {label:"Aprovação parcial final",         dot:"#639922",hint:"Benefício parcialmente aprovado"},
+  aprovacao_total:        {label:"Aprovação total",                 dot:"#CCD650",hint:"Benefício integralmente aprovado"},
+  reprovado_integralmente:{label:"Reprovado integralmente",         dot:"#E24B4A",hint:"Sem benefício neste ano-base"}
 };
 
-function fmt(val) {
-  if (val >= 1000000) return "R$ " + (val/1000000).toFixed(1).replace(".",",") + "M";
-  if (val >= 1000)    return "R$ " + (val/1000).toFixed(0) + "K";
-  return "R$ " + val.toFixed(0);
+function sc(s) {
+  if (s==="done")        return {bg:"rgba(99,153,34,0.2)",  text:"#97C459", dot:"#639922", label:"Concluído"};
+  if (s==="in-progress") return {bg:"rgba(55,138,221,0.2)", text:"#85B7EB", dot:"#378ADD", label:"Em andamento"};
+  if (s==="delayed")     return {bg:"rgba(226,75,74,0.2)",  text:"#F09595", dot:"#E24B4A", label:"Em atraso"};
+  return                        {bg:"rgba(255,255,255,0.06)",text:"rgba(255,255,255,0.35)",dot:"rgba(255,255,255,0.15)",label:"Pendente"};
 }
 
-async function fetchJSON(path, token) {
-  var res = await fetch(SUPABASE_URL + path, {
-    headers: {"apikey": SUPABASE_KEY, "Authorization": "Bearer " + (token || SUPABASE_KEY)}
-  });
-  if (!res.ok) throw new Error("Erro " + res.status);
+function stageStatus(ea) {
+  if (!ea.length) return "pending";
+  if (ea.some(function(t){return t.status==="delayed";})) return "delayed";
+  var done=ea.filter(function(t){return t.status==="done";}).length;
+  if (done===ea.length) return "done";
+  if (done>0||ea.some(function(t){return t.status==="in-progress";})) return "in-progress";
+  return "pending";
+}
+
+function fmt(val) {
+  if (val>=1000000) return "R$ "+(val/1000000).toFixed(1).replace(".",",")+"M";
+  if (val>=1000)    return "R$ "+(val/1000).toFixed(0)+"K";
+  return "R$ "+val.toFixed(0);
+}
+
+async function fetchJSON(path,token) {
+  var res=await fetch(SUPABASE_URL+path,{headers:{"apikey":SUPABASE_KEY,"Authorization":"Bearer "+(token||SUPABASE_KEY)}});
+  if (!res.ok) throw new Error("Erro "+res.status);
   return res.json();
 }
 
-function setLogoTopbar(elId, logoUrl) {
-  var wrap = document.getElementById(elId);
-  if (!wrap || !logoUrl) return;
-  wrap.innerHTML = '<img src="' + logoUrl + '" style="max-height:22px;max-width:110px;object-fit:contain"/>';
+function setLogo(elId,url) {
+  if (!url) return;
+  var el=document.getElementById(elId);
+  if (!el) return;
+  el.innerHTML='<img src="'+url+'" style="max-height:24px;max-width:110px;object-fit:contain"/>';
 }
 
 async function loadParceiroInfo() {
   try {
-    var arr = await fetchJSON("/rest/v1/parceiros?slug=eq." + PARCEIRO_SLUG + "&select=nome,logo_url");
+    var arr=await fetchJSON("/rest/v1/parceiros?slug=eq."+PARCEIRO_SLUG+"&select=nome,logo_url");
     if (!arr.length) return;
-    var p = arr[0];
-    parceiroNome = p.nome;
-    document.getElementById("auth-partner-name").textContent = p.nome;
-    document.title = p.nome + " | Portal de Acompanhamento";
-    if (p.logo_url) {
-      var img = document.getElementById("auth-logo-img");
-      img.src = p.logo_url; img.style.display = "block";
-      document.getElementById("auth-logo-fallback").style.display = "none";
+    var p=arr[0]; parceiroNome=p.nome;
+    document.getElementById("auth-partner-name").textContent=p.nome;
+    document.title=p.nome+" | Portal de Acompanhamento";
+    if (p.logo_url){
+      var img=document.getElementById("auth-logo-img");
+      img.src=p.logo_url; img.style.display="block";
+      document.getElementById("auth-logo-fallback").style.display="none";
     }
-  } catch(e) {}
+  } catch(e){}
 }
 
 function switchTab(tab) {
-  var isLogin = tab === "login";
-  document.getElementById("tab-login").classList.toggle("active", isLogin);
-  document.getElementById("tab-signup").classList.toggle("active", !isLogin);
-  document.getElementById("form-login").style.display  = isLogin ? "block" : "none";
-  document.getElementById("form-signup").style.display = isLogin ? "none"  : "block";
-  document.getElementById("login-err").style.display   = "none";
-  document.getElementById("signup-err").style.display  = "none";
-  document.getElementById("signup-ok").style.display   = "none";
+  var il=tab==="login";
+  document.getElementById("tab-login").classList.toggle("active",il);
+  document.getElementById("tab-signup").classList.toggle("active",!il);
+  document.getElementById("form-login").style.display=il?"block":"none";
+  document.getElementById("form-signup").style.display=il?"none":"block";
+  document.getElementById("login-err").style.display="none";
+  document.getElementById("signup-err").style.display="none";
+  document.getElementById("signup-ok").style.display="none";
 }
 
 async function doLogin() {
-  var email = document.getElementById("login-email").value.trim();
-  var password = document.getElementById("login-password").value;
-  var btn = document.getElementById("login-btn");
-  var err = document.getElementById("login-err");
-  if (!email || !password) return;
-  btn.disabled = true; btn.textContent = "Entrando..."; err.style.display = "none";
+  var email=document.getElementById("login-email").value.trim();
+  var pass=document.getElementById("login-password").value;
+  var btn=document.getElementById("login-btn");
+  var err=document.getElementById("login-err");
+  if (!email||!pass) return;
+  btn.disabled=true; btn.textContent="Entrando..."; err.style.display="none";
   try {
-    var res = await fetch(SUPABASE_URL + "/auth/v1/token?grant_type=password", {
-      method: "POST",
-      headers: {"apikey": SUPABASE_KEY, "Content-Type": "application/json"},
-      body: JSON.stringify({email: email, password: password})
-    });
-    var data = await res.json();
+    var res=await fetch(SUPABASE_URL+"/auth/v1/token?grant_type=password",{method:"POST",headers:{"apikey":SUPABASE_KEY,"Content-Type":"application/json"},body:JSON.stringify({email:email,password:pass})});
+    var data=await res.json();
     if (!res.ok) throw new Error("invalido");
-    accessToken = data.access_token; sessionStorage.setItem("sb_token", accessToken);
-    var permitidos = await fetchJSON("/rest/v1/emails_permitidos?email=eq." + encodeURIComponent(email) + "&parceiro_slug=eq." + PARCEIRO_SLUG + "&select=cliente_slug", accessToken);
-    if (!permitidos.length) throw new Error("Nenhum cronograma vinculado a este e-mail neste portal.");
-    todosClientes = permitidos.map(function(p) { return p.cliente_slug; }); sessionStorage.setItem("sb_clientes", JSON.stringify(todosClientes));
-    document.getElementById("auth-screen").style.display = "none";
+    accessToken=data.access_token;
+    sessionStorage.setItem("sb_token",accessToken);
+    var perm=await fetchJSON("/rest/v1/emails_permitidos?email=eq."+encodeURIComponent(email)+"&parceiro_slug=eq."+PARCEIRO_SLUG+"&select=cliente_slug",accessToken);
+    if (!perm.length) throw new Error("Nenhum cronograma vinculado a este e-mail neste portal.");
+    todosClientes=perm.map(function(p){return p.cliente_slug;});
+    sessionStorage.setItem("sb_clientes",JSON.stringify(todosClientes));
+    document.getElementById("auth-screen").style.display="none";
     showHistorico();
   } catch(e) {
-    err.textContent = e.message === "invalido" ? "E-mail ou senha incorretos." : e.message;
-    err.style.display = "block";
-    btn.disabled = false; btn.textContent = "Entrar";
-    accessToken = null;
+    err.textContent=e.message==="invalido"?"E-mail ou senha incorretos.":e.message;
+    err.style.display="block";
+    btn.disabled=false; btn.textContent="Entrar";
+    accessToken=null;
   }
 }
 
 async function doSignup() {
-  var email = document.getElementById("signup-email").value.trim();
-  var password = document.getElementById("signup-password").value;
-  var confirm = document.getElementById("signup-confirm").value;
-  var btn = document.getElementById("signup-btn");
-  var err = document.getElementById("signup-err");
-  var ok  = document.getElementById("signup-ok");
-  err.style.display = "none"; ok.style.display = "none";
-  if (!email || !password) return;
-  if (password !== confirm) { err.textContent = "As senhas não coincidem."; err.style.display = "block"; return; }
-  if (password.length < 6)  { err.textContent = "Mínimo de 6 caracteres."; err.style.display = "block"; return; }
-  btn.disabled = true; btn.textContent = "Criando conta...";
+  var email=document.getElementById("signup-email").value.trim();
+  var pass=document.getElementById("signup-password").value;
+  var conf=document.getElementById("signup-confirm").value;
+  var btn=document.getElementById("signup-btn");
+  var err=document.getElementById("signup-err");
+  var ok=document.getElementById("signup-ok");
+  err.style.display="none"; ok.style.display="none";
+  if (!email||!pass) return;
+  if (pass!==conf){err.textContent="As senhas não coincidem.";err.style.display="block";return;}
+  if (pass.length<6){err.textContent="Mínimo de 6 caracteres.";err.style.display="block";return;}
+  btn.disabled=true; btn.textContent="Criando conta...";
   try {
-    var check = await fetchJSON("/rest/v1/emails_permitidos?email=eq." + encodeURIComponent(email) + "&parceiro_slug=eq." + PARCEIRO_SLUG + "&select=email");
-    if (!check.length) { err.textContent = "E-mail não autorizado neste portal."; err.style.display = "block"; btn.disabled = false; btn.textContent = "Criar conta"; return; }
-    var res = await fetch(SUPABASE_URL + "/auth/v1/signup", {
-      method: "POST",
-      headers: {"apikey": SUPABASE_KEY, "Content-Type": "application/json"},
-      body: JSON.stringify({email: email, password: password})
-    });
-    var data = await res.json();
-    if (!res.ok) throw new Error(data.error_description || "Erro ao criar conta.");
-    ok.style.display = "block"; btn.disabled = false; btn.textContent = "Criar conta";
-  } catch(e) {
-    err.textContent = e.message; err.style.display = "block"; btn.disabled = false; btn.textContent = "Criar conta";
-  }
+    var chk=await fetchJSON("/rest/v1/emails_permitidos?email=eq."+encodeURIComponent(email)+"&parceiro_slug=eq."+PARCEIRO_SLUG+"&select=email");
+    if (!chk.length){err.textContent="E-mail não autorizado neste portal.";err.style.display="block";btn.disabled=false;btn.textContent="Criar conta";return;}
+    var res=await fetch(SUPABASE_URL+"/auth/v1/signup",{method:"POST",headers:{"apikey":SUPABASE_KEY,"Content-Type":"application/json"},body:JSON.stringify({email:email,password:pass})});
+    var data=await res.json();
+    if (!res.ok) throw new Error(data.error_description||"Erro ao criar conta.");
+    ok.style.display="block"; btn.disabled=false; btn.textContent="Criar conta";
+  } catch(e){err.textContent=e.message;err.style.display="block";btn.disabled=false;btn.textContent="Criar conta";}
 }
 
 function doLogout() {
-  accessToken = null; todosClientes = []; empresaSlug = null; sessionStorage.removeItem("sb_token"); sessionStorage.removeItem("sb_clientes"); var lb = document.getElementById("login-btn"); if(lb){ lb.disabled = false; lb.textContent = "Entrar"; }
-  document.getElementById("hist-screen").style.display = "none";
-  document.getElementById("cron-screen").style.display = "none";
-  document.getElementById("auth-screen").style.display = "flex";
-  document.getElementById("login-password").value = "";
+  accessToken=null; todosClientes=[]; empresaSlug=null;
+  sessionStorage.removeItem("sb_token"); sessionStorage.removeItem("sb_clientes");
+  var lb=document.getElementById("login-btn"); if(lb){lb.disabled=false;lb.textContent="Entrar";}
+  document.getElementById("hist-screen").style.display="none";
+  document.getElementById("cron-screen").style.display="none";
+  document.getElementById("auth-screen").style.display="flex";
+  document.getElementById("login-password").value="";
 }
 
 function goBack() {
-  document.getElementById("cron-screen").style.display = "none";
-  document.getElementById("hist-screen").style.display = "flex";
+  document.getElementById("cron-screen").style.display="none";
+  document.getElementById("hist-screen").style.display="flex";
+}
+
+function toggleEtapa(id) {
+  var body=document.getElementById("ecb-"+id);
+  var arrow=document.getElementById("eca-"+id);
+  if (!body) return;
+  var open=body.classList.toggle("open");
+  if (arrow) arrow.classList.toggle("open",open);
 }
 
 async function showHistorico() {
-  document.getElementById("hist-screen").style.display = "flex";
-  var content = document.getElementById("hist-content");
-  content.innerHTML = '<div class="loading"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div>';
-
+  var hs=document.getElementById("hist-screen");
+  hs.style.display="flex";
+  var content=document.getElementById("hist-content");
+  content.innerHTML='<div class="loading"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div>';
   try {
-    var slugList = todosClientes.join(",");
-    var clientes = await fetchJSON("/rest/v1/clientes?slug=in.(" + slugList + ")&select=nome,slug,ano_base,empresa_slug,logo_url", accessToken);
-    clientes.sort(function(a,b){ return b.ano_base - a.ano_base; });
+    var slugList=todosClientes.join(",");
+    var clientes=await fetchJSON("/rest/v1/clientes?slug=in.("+slugList+")&select=nome,slug,ano_base,empresa_slug,logo_url",accessToken);
+    clientes.sort(function(a,b){return b.ano_base-a.ano_base;});
+    var c0=clientes[0];
+    empresaSlug=c0.empresa_slug||c0.slug;
+    clienteLogoUrl=c0.logo_url;
+    document.getElementById("hist-t-name").textContent=c0.nome;
+    document.title=c0.nome+" | Lei do Bem";
+    setLogo("hist-t-logo",clienteLogoUrl);
 
-    var cliente0 = clientes[0];
-    empresaSlug = cliente0.empresa_slug || cliente0.slug;
-    clienteLogoUrl = cliente0.logo_url;
+    var hist=await fetchJSON("/rest/v1/historico_beneficio?empresa_slug=eq."+empresaSlug+"&order=ano.asc&select=*",accessToken);
+    var totalD=hist.reduce(function(s,h){return s+Number(h.dispendio);},0);
+    var totalB=hist.reduce(function(s,h){return s+Number(h.beneficio);},0);
+    var anoIni=hist.length?hist[0].ano:"";
+    var anoFim=hist.length?hist[hist.length-1].ano:"";
+    var maxD=hist.length?Math.max.apply(null,hist.map(function(h){return Number(h.dispendio);})):1;
 
-    document.getElementById("hist-t-name").textContent = cliente0.nome;
-    document.title = cliente0.nome + " | Lei do Bem";
-    setLogoTopbar("hist-t-logo", clienteLogoUrl);
+    var barsHtml=hist.map(function(h){
+      var pD=Math.round(Number(h.dispendio)/maxD*100);
+      var pB=Math.round(Number(h.beneficio)/maxD*100);
+      return '<div class="hist-bar-group"><div class="hist-bar hist-bar-d" style="height:'+pD+'%"></div><div class="hist-bar hist-bar-b" style="height:'+pB+'%"></div></div>';
+    }).join("");
+    var labelsHtml=hist.map(function(h){return '<div class="hist-chart-label">'+h.ano+'</div>';}).join("");
 
-    var historico = await fetchJSON("/rest/v1/historico_beneficio?empresa_slug=eq." + empresaSlug + "&order=ano.asc&select=*", accessToken);
-
-    var totalDisp = historico.reduce(function(s,h){ return s + Number(h.dispendio); }, 0);
-    var totalBen  = historico.reduce(function(s,h){ return s + Number(h.beneficio); }, 0);
-    var anoInicio = historico.length ? historico[0].ano : "";
-    var anoFim    = historico.length ? historico[historico.length-1].ano : "";
-
-    var maxDisp = Math.max.apply(null, historico.map(function(h){ return Number(h.dispendio); }));
-
-    var barsHtml = historico.map(function(h) {
-      var pctD = Math.round(Number(h.dispendio) / maxDisp * 100);
-      var pctB = Math.round(Number(h.beneficio)  / maxDisp * 100);
-      return '<div class="hist-bar-group"><div class="hist-bar hist-bar-d" style="height:' + pctD + '%"></div><div class="hist-bar hist-bar-b" style="height:' + pctB + '%"></div></div>';
+    var yearsHtml=clientes.map(function(c){
+      var isAtual=c.ano_base==new Date().getFullYear();
+      var sBg=isAtual?"rgba(204,214,80,0.15)":"rgba(55,138,221,0.15)";
+      var sTx=isAtual?"#CCD650":"#85B7EB";
+      var sLbl=isAtual?"Atual":"Em andamento";
+      return '<div class="year-card" onclick="loadCronograma(\''+c.slug+'\')"><div class="yc-label">Ano-base</div><div class="yc-year">'+c.ano_base+'</div><div class="yc-status" style="background:'+sBg+';color:'+sTx+'">'+sLbl+'</div></div>';
     }).join("");
 
-    var labelsHtml = historico.map(function(h) {
-      return '<div class="hist-chart-label">' + h.ano + '</div>';
-    }).join("");
+    content.innerHTML=
+      '<div class="hero-section">'+
+        '<div class="hero-circle" style="width:380px;height:380px;top:-180px;right:-80px"></div>'+
+        '<div class="hero-circle" style="width:180px;height:180px;bottom:-90px;left:-40px"></div>'+
+        '<div style="position:absolute;top:24px;right:220px;width:4px;height:4px;border-radius:50%;background:rgba(204,214,80,0.25);z-index:1"></div>'+
+        '<div class="hero-inner">'+
+          '<div class="hero-eyebrow"><div class="hero-eyebrow-line"></div>Histórico do benefício</div>'+
+          '<div class="hero-name">'+c0.nome+'</div>'+
+          '<div class="hero-since">Lei do Bem · Desde <strong>'+anoIni+'</strong> · '+parceiroNome+'</div>'+
+        '</div>'+
+      '</div>'+
+      '<div class="hist-totals">'+
+        '<div class="hist-total"><div class="hist-total-line" style="background:rgba(55,138,221,0.6)"></div><div class="hist-total-lbl">Dispêndio total com P&amp;D</div><div class="hist-total-val" style="color:#85B7EB">'+fmt(totalD)+'</div><div class="hist-total-sub">Acumulado '+anoIni+'–'+anoFim+'</div></div>'+
+        '<div class="hist-total"><div class="hist-total-line" style="background:#CCD650"></div><div class="hist-total-lbl">Benefício total gerado</div><div class="hist-total-val" style="color:#CCD650">'+fmt(totalB)+'</div><div class="hist-total-sub">Dedução fiscal acumulada</div></div>'+
+      '</div>'+
+      '<div class="hist-chart-section">'+
+        '<div class="hist-chart-header"><div class="hist-chart-title">Evolução anual</div><div class="hist-legend"><div class="hist-legend-item"><div class="hist-legend-dot" style="background:rgba(55,138,221,0.6)"></div>Dispêndio</div><div class="hist-legend-item"><div class="hist-legend-dot" style="background:rgba(204,214,80,0.7)"></div>Benefício</div></div></div>'+
+        '<div class="hist-chart-wrap"><div class="hist-chart-lines"><div class="hist-chart-line"></div><div class="hist-chart-line"></div><div class="hist-chart-line"></div><div class="hist-chart-line"></div></div><div class="hist-chart-bars">'+barsHtml+'</div></div>'+
+        '<div class="hist-chart-labels">'+labelsHtml+'</div>'+
+      '</div>'+
+      '<div class="hist-select-section"><div class="hist-select-title">Selecione o ano-base para acompanhar<div class="hist-select-line"></div></div><div class="year-grid">'+yearsHtml+'</div></div>';
 
-    var yearsHtml = clientes.map(function(c) {
-      var isAtual = c.ano_base == new Date().getFullYear();
-      var statusBg  = isAtual ? "rgba(204,214,80,0.15)" : "rgba(55,138,221,0.15)";
-      var statusTxt = isAtual ? "#CCD650" : "#85B7EB";
-      var statusLbl = isAtual ? "Atual" : "Em andamento";
-      return '<div class="year-card" onclick="loadCronograma(\'' + c.slug + '\')">' +
-        '<div class="yc-label">Ano-base</div>' +
-        '<div class="yc-year">' + c.ano_base + '</div>' +
-        '<div class="yc-status" style="background:' + statusBg + ';color:' + statusTxt + '">' + statusLbl + '</div>' +
-        '</div>';
-    }).join("");
-
-    content.innerHTML =
-      '<div class="hist-hero">' +
-        '<div class="hist-hero-circle" style="width:380px;height:380px;top:-180px;right:-80px"></div>' +
-        '<div class="hist-hero-circle" style="width:180px;height:180px;bottom:-90px;left:-40px"></div>' +
-        '<div style="position:absolute;top:24px;right:220px;width:4px;height:4px;border-radius:50%;background:rgba(204,214,80,0.25)"></div>' +
-        '<div class="hist-hero-inner">' +
-          '<div class="hist-eyebrow"><div class="hist-eyebrow-line"></div>Histórico do benefício</div>' +
-          '<div class="hist-name">' + cliente0.nome + '</div>' +
-          '<div class="hist-since">Lei do Bem · Desde <strong>' + anoInicio + '</strong> · ' + parceiroNome + '</div>' +
-        '</div>' +
-      '</div>' +
-      '<div class="hist-totals">' +
-        '<div class="hist-total">' +
-          '<div class="hist-total-line" style="background:rgba(55,138,221,0.6)"></div>' +
-          '<div class="hist-total-lbl">Dispêndio total com P&amp;D</div>' +
-          '<div class="hist-total-val" style="color:#85B7EB">' + fmt(totalDisp) + '</div>' +
-          '<div class="hist-total-sub">Acumulado ' + anoInicio + '–' + anoFim + '</div>' +
-        '</div>' +
-        '<div class="hist-total">' +
-          '<div class="hist-total-line" style="background:#CCD650"></div>' +
-          '<div class="hist-total-lbl">Benefício total gerado</div>' +
-          '<div class="hist-total-val" style="color:#CCD650">' + fmt(totalBen) + '</div>' +
-          '<div class="hist-total-sub">Dedução fiscal acumulada</div>' +
-        '</div>' +
-      '</div>' +
-      '<div class="hist-chart-section">' +
-        '<div class="hist-chart-header">' +
-          '<div class="hist-chart-title">Evolução anual</div>' +
-          '<div class="hist-legend">' +
-            '<div class="hist-legend-item"><div class="hist-legend-dot" style="background:rgba(55,138,221,0.55)"></div>Dispêndio</div>' +
-            '<div class="hist-legend-item"><div class="hist-legend-dot" style="background:rgba(204,214,80,0.65)"></div>Benefício</div>' +
-          '</div>' +
-        '</div>' +
-        '<div class="hist-chart-wrap">' +
-          '<div class="hist-chart-lines"><div class="hist-chart-line"></div><div class="hist-chart-line"></div><div class="hist-chart-line"></div><div class="hist-chart-line"></div></div>' +
-          '<div class="hist-chart-bars">' + barsHtml + '</div>' +
-        '</div>' +
-        '<div class="hist-chart-labels">' + labelsHtml + '</div>' +
-      '</div>' +
-      '<div class="hist-select-section">' +
-        '<div class="hist-select-title">Selecione o ano-base para acompanhar<div class="hist-select-line"></div></div>' +
-        '<div class="year-grid">' + yearsHtml + '</div>' +
-      '</div>';
-
-  } catch(e) {
-    content.innerHTML = '<div class="error-box">Erro ao carregar histórico: ' + e.message + '</div>';
+  } catch(e){
+    content.innerHTML='<div class="error-box">Erro ao carregar histórico: '+e.message+'</div>';
   }
 }
 
-function sc(s) {
-  if (s === "done")        return {bg:"rgba(99,153,34,0.2)",  text:"#97C459", dot:"#639922", label:"Concluído"};
-  if (s === "in-progress") return {bg:"rgba(55,138,221,0.2)", text:"#85B7EB", dot:"#378ADD", label:"Em andamento"};
-  if (s === "delayed")     return {bg:"rgba(226,75,74,0.2)",  text:"#F09595", dot:"#E24B4A", label:"Em atraso"};
-  return                          {bg:"rgba(255,255,255,0.06)",text:"rgba(255,255,255,0.35)",dot:"rgba(255,255,255,0.2)",label:"Pendente"};
-}
-
-function stageStatus(atividades) {
-  if (!atividades.length) return "pending";
-  if (atividades.some(function(t){ return t.status === "delayed"; })) return "delayed";
-  var done = atividades.filter(function(t){ return t.status === "done"; }).length;
-  if (done === atividades.length) return "done";
-  if (done > 0 || atividades.some(function(t){ return t.status === "in-progress"; })) return "in-progress";
-  return "pending";
-}
-
-function toggleCard(id) {
-  var body = document.getElementById("ecb-" + id);
-  if (body) body.classList.toggle("open");
-}
-
 async function loadCronograma(clienteSlug) {
-  document.getElementById("hist-screen").style.display = "none";
-  document.getElementById("cron-screen").style.display = "flex";
-  document.getElementById("cron-back-btn").style.display = todosClientes.length > 1 ? "inline-block" : "none";
-
-  var content = document.getElementById("cron-content");
-  content.innerHTML = '<div class="loading"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div>';
-
+  document.getElementById("hist-screen").style.display="none";
+  var cs=document.getElementById("cron-screen");
+  cs.style.display="flex";
+  document.getElementById("cron-back-btn").style.display=todosClientes.length>1?"inline-block":"none";
+  var content=document.getElementById("cron-content");
+  content.innerHTML='<div class="loading"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></div>';
   try {
-    var clienteArr = await fetchJSON("/rest/v1/clientes?slug=eq." + clienteSlug + "&select=*", accessToken);
-    var etapas     = await fetchJSON("/rest/v1/etapas?cliente_slug=eq." + clienteSlug + "&order=ordem.asc&select=*", accessToken);
-    var itens      = await fetchJSON("/rest/v1/itens?cliente_slug=eq." + clienteSlug + "&order=ordem.asc&select=*", accessToken);
-    var statusArr  = await fetchJSON("/rest/v1/status_mcti?cliente_slug=eq." + clienteSlug + "&select=status", accessToken);
+    var clienteArr=await fetchJSON("/rest/v1/clientes?slug=eq."+clienteSlug+"&select=*",accessToken);
+    var etapas    =await fetchJSON("/rest/v1/etapas?cliente_slug=eq."+clienteSlug+"&order=ordem.asc&select=*",accessToken);
+    var itens     =await fetchJSON("/rest/v1/itens?cliente_slug=eq."+clienteSlug+"&order=ordem.asc&select=*",accessToken);
+    var statusArr =await fetchJSON("/rest/v1/status_mcti?cliente_slug=eq."+clienteSlug+"&select=status",accessToken);
 
-    var cliente = clienteArr[0];
+    var cliente=clienteArr[0];
     if (!cliente) throw new Error("Cliente não encontrado.");
 
-    document.getElementById("cron-t-name").textContent = cliente.nome;
-    document.getElementById("cron-t-sub").textContent  = "Lei do Bem " + cliente.ano_base;
-    document.getElementById("cron-t-chip").textContent = "Ano-base " + cliente.ano_base;
-    document.title = cliente.nome + " | Lei do Bem " + cliente.ano_base;
-    setLogoTopbar("cron-t-logo", cliente.logo_url || clienteLogoUrl);
+    var logoUrl=cliente.logo_url||clienteLogoUrl;
+    document.getElementById("cron-t-name").textContent=cliente.nome;
+    document.getElementById("cron-t-sub").textContent="Lei do Bem "+cliente.ano_base;
+    document.getElementById("cron-t-chip").textContent="Ano-base "+cliente.ano_base;
+    document.title=cliente.nome+" | Lei do Bem "+cliente.ano_base;
+    setLogo("cron-t-logo",logoUrl);
 
-    var mctiStatus = statusArr.length ? statusArr[0].status : "nao_enviado";
-    var ms = MCTI_STATUS[mctiStatus] || MCTI_STATUS["nao_enviado"];
+    var mctiStatus=statusArr.length?statusArr[0].status:"nao_enviado";
+    var ms=MCTI_STATUS[mctiStatus]||MCTI_STATUS["nao_enviado"];
 
-    var atividades = itens.filter(function(i){ return i.tipo === "atividade"; });
-    var documentos  = itens.filter(function(i){ return i.tipo === "documento"; });
-    var totalAtiv   = atividades.length;
-    var doneAtiv    = atividades.filter(function(a){ return a.status === "done"; }).length;
-    var pct         = totalAtiv ? Math.round(doneAtiv / totalAtiv * 100) : 0;
-    var pendDocs    = documentos.filter(function(d){ return d.status === "pending"; }).length;
-    var hasDelayed  = itens.some(function(i){ return i.status === "delayed"; });
-    var emAndamento = etapas.filter(function(e) {
-      var ea = atividades.filter(function(a){ return a.etapa_id === e.id; });
-      return stageStatus(ea) === "in-progress";
-    }).length;
-    var doneStages = etapas.filter(function(e) {
-      var ea = atividades.filter(function(a){ return a.etapa_id === e.id; });
-      return stageStatus(ea) === "done";
-    }).length;
+    var atividades=itens.filter(function(i){return i.tipo==="atividade";});
+    var documentos =itens.filter(function(i){return i.tipo==="documento";});
+    var totalAtiv  =atividades.length;
+    var doneAtiv   =atividades.filter(function(a){return a.status==="done";}).length;
+    var pct        =totalAtiv?Math.round(doneAtiv/totalAtiv*100):0;
+    var pendDocs   =documentos.filter(function(d){return d.status==="pending";}).length;
+    var hasDelayed =itens.some(function(i){return i.status==="delayed";});
+    var emAnd      =etapas.filter(function(e){var ea=atividades.filter(function(a){return a.etapa_id===e.id;});return stageStatus(ea)==="in-progress";}).length;
+    var doneStages =etapas.filter(function(e){var ea=atividades.filter(function(a){return a.etapa_id===e.id;});return stageStatus(ea)==="done";}).length;
 
-    var gruposOrdem = ["contabil", "tecnico", "mcti"];
-    var gruposHtml = gruposOrdem.map(function(gk) {
-      var g = GRUPOS[gk];
-      var etapasG = etapas.filter(function(e){ return e.grupo === gk; });
-      if (!etapasG.length) return "";
-      var doneG = etapasG.filter(function(e) {
-        var ea = atividades.filter(function(a){ return a.etapa_id === e.id; });
-        return stageStatus(ea) === "done";
-      }).length;
-      var pctG = Math.round(doneG / etapasG.length * 100);
+    var gruposHtml=["contabil","tecnico","mcti"].map(function(gk){
+      var g=GRUPOS[gk];
+      var etG=etapas.filter(function(e){return e.grupo===gk;});
+      if (!etG.length) return "";
+      var doneG=etG.filter(function(e){var ea=atividades.filter(function(a){return a.etapa_id===e.id;});return stageStatus(ea)==="done";}).length;
+      var pctG=Math.round(doneG/etG.length*100);
 
-      var cardsHtml = etapasG.map(function(etapa, idx) {
-        var ea = atividades.filter(function(a){ return a.etapa_id === etapa.id; });
-        var ed = documentos.filter(function(d){ return d.etapa_id === etapa.id; });
-        var ss = stageStatus(ea);
-        var sc_val = sc(ss);
-        var totalEa = ea.length;
-        var doneEa  = ea.filter(function(a){ return a.status === "done"; }).length;
-        var pctEa   = totalEa ? Math.round(doneEa / totalEa * 100) : 0;
+      var etapasHtml=etG.map(function(etapa,idx){
+        var ea=atividades.filter(function(a){return a.etapa_id===etapa.id;});
+        var ed=documentos.filter(function(d){return d.etapa_id===etapa.id;});
+        var ss=stageStatus(ea);
+        var scv=sc(ss);
+        var doneEa=ea.filter(function(a){return a.status==="done";}).length;
+        var pctEa=ea.length?Math.round(doneEa/ea.length*100):0;
+        var barColor=ss==="done"?"#639922":ss==="in-progress"?g.fill:ss==="delayed"?"#E24B4A":"rgba(255,255,255,0.1)";
+        var autoOpen=ss==="in-progress"||ss==="delayed";
 
-        var itemsHtml = ea.map(function(t) {
-          var tc = sc(t.status);
-          return '<div class="ec-item"><div class="ec-item-dot" style="background:' + tc.dot + '"></div><div class="ec-item-name">' + t.nome + '</div><div class="ec-item-badge" style="background:' + tc.bg + ';color:' + tc.text + '">' + tc.label + '</div></div>';
+        var ativHtml=ea.map(function(t){
+          var tc=sc(t.status);
+          return '<div class="ativ"><div class="ativ-dot" style="background:'+tc.dot+'"></div><div class="ativ-name">'+t.nome+'</div><div class="ativ-badge" style="background:'+tc.bg+';color:'+tc.text+'">'+tc.label+'</div></div>';
         }).join("");
 
-        var docsHtml2 = "";
-        if (ed.length > 0) {
-          docsHtml2 = '<div class="ec-section-lbl">Documentos</div>' + ed.map(function(d) {
-            var dc = sc(d.status);
-            var dlBtn = d.arquivo_url ? '<a class="dl-btn" href="' + d.arquivo_url + '" target="_blank" download><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v7M3 5.5l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Baixar</a>' : "";
-            var slabel = d.status === "done" ? "Recebido" : dc.label;
-            return '<div class="ec-item"><svg width="12" height="12" viewBox="0 0 14 14" fill="none" style="flex-shrink:0;color:rgba(255,255,255,0.25)"><rect x="2" y="1" width="9" height="11" rx="1.5" stroke="currentColor" stroke-width="1"/><path d="M4 4.5h5M4 6.5h5M4 8.5h3" stroke="currentColor" stroke-width=".9"/></svg><div class="ec-item-name">' + d.nome + '</div>' + dlBtn + '<div class="ec-item-badge" style="background:' + dc.bg + ';color:' + dc.text + '">' + slabel + '</div></div>';
+        var docHtml="";
+        if (ed.length){
+          docHtml='<div class="sec-lbl">Documentos</div>'+ed.map(function(d){
+            var dc=sc(d.status);
+            var dl=d.arquivo_url?'<a class="dl-btn" href="'+d.arquivo_url+'" target="_blank" download><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v7M3 5.5l3 3 3-3M1 10h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Baixar</a>':"";
+            var sl=d.status==="done"?"Recebido":dc.label;
+            return '<div class="doc-row"><svg width="11" height="11" viewBox="0 0 14 14" fill="none" style="flex-shrink:0;margin-top:3px;color:rgba(255,255,255,0.2)"><rect x="2" y="1" width="9" height="11" rx="1.5" stroke="currentColor" stroke-width="1"/><path d="M4 4.5h5M4 6.5h5M4 8.5h3" stroke="currentColor" stroke-width=".9"/></svg><div class="doc-name">'+d.nome+'</div><div class="doc-right">'+dl+'<span class="ativ-badge" style="background:'+dc.bg+';color:'+dc.text+'">'+sl+'</span></div></div>';
           }).join("");
         }
 
-        var noteHtml = etapa.observacao ? '<div style="margin-top:8px;padding:8px 10px;background:rgba(55,138,221,0.1);border-radius:6px;font-size:11px;color:rgba(255,255,255,0.5);border-left:2px solid #378ADD">' + etapa.observacao + '</div>' : "";
-        var delayedClass = ss === "delayed" ? " delayed" : "";
+        var noteHtml=etapa.observacao?'<div class="note-box">'+etapa.observacao+'</div>':"";
+        var bodyContent=ativHtml+docHtml+noteHtml;
 
-        return '<div class="etapa-card' + delayedClass + '" onclick="toggleCard(' + etapa.id + ')">' +
-          '<div class="ec-top">' +
-            '<div class="ec-num" style="background:' + g.corBg + ';color:' + g.cor + '">' + String(idx+1).padStart(2,"0") + '</div>' +
-            '<div class="ec-name">' + etapa.nome + '</div>' +
-            '<div class="ec-badge" style="background:' + sc_val.bg + ';color:' + sc_val.text + '">' + sc_val.label + '</div>' +
-          '</div>' +
-          '<div class="ec-track"><div class="ec-fill" style="width:' + pctEa + '%;background:' + g.fill + '"></div></div>' +
-          '<div class="ec-meta"><div class="ec-acts">' + doneEa + ' de ' + totalEa + ' atividades</div><div class="ec-date">' + etapa.periodo + '</div></div>' +
-          '<div class="ec-body" id="ecb-' + etapa.id + '">' +
-            '<div class="ec-section-lbl">Atividades</div>' + itemsHtml + docsHtml2 + noteHtml +
-          '</div>' +
+        return '<div class="etapa">'+
+          '<div class="etapa-bar" style="background:'+barColor+'"></div>'+
+          '<div class="etapa-row" onclick="toggleEtapa('+etapa.id+')">'+
+            '<div class="etapa-num" style="background:'+g.corBg+';color:'+g.cor+'">'+String(idx+1).padStart(2,"0")+'</div>'+
+            '<div class="etapa-info">'+
+              '<div class="etapa-name">'+etapa.nome+'</div>'+
+              '<div class="etapa-prog-row">'+
+                '<div class="etapa-track"><div class="etapa-fill" style="width:'+pctEa+'%;background:'+barColor+'"></div></div>'+
+                '<div class="etapa-pct">'+doneEa+'/'+ea.length+'</div>'+
+              '</div>'+
+            '</div>'+
+            '<div class="etapa-right">'+
+              '<div class="etapa-date">'+etapa.periodo+'</div>'+
+              '<div class="etapa-badge" style="background:'+scv.bg+';color:'+scv.text+'">'+scv.label+'</div>'+
+              '<div class="etapa-arrow'+(autoOpen?" open":"''")+('"')+(autoOpen?" open":"")+('" id="eca-'+etapa.id+'">▼</div>')+
+            '</div>'+
+          '</div>'+
+          '<div class="etapa-body'+(autoOpen?" open":"''")+('" id="ecb-'+etapa.id+'">'+bodyContent+'</div>')+
         '</div>';
       }).join("");
 
-      return '<div class="grupo-wrap">' +
-        '<div class="grupo-head">' +
-          '<div class="grupo-icon" style="background:' + g.corBg + '">' + g.icon + '</div>' +
-          '<div class="grupo-info"><div class="grupo-title">' + g.label + '</div><div class="grupo-subtitle">' + g.sub + '</div></div>' +
-          '<div class="grupo-line"></div>' +
-          '<div class="grupo-badge">' + pctG + '%</div>' +
-        '</div>' +
-        '<div class="cards-grid">' + cardsHtml + '</div>' +
+      return '<div class="grupo-wrap">'+
+        '<div class="grupo-head">'+
+          '<div class="grupo-icon" style="background:'+g.corBg+'">'+g.icon+'</div>'+
+          '<div class="grupo-info"><div class="grupo-title">'+g.label+'</div><div class="grupo-subtitle">'+g.sub+'</div></div>'+
+          '<div class="grupo-pct">'+pctG+'%</div>'+
+        '</div>'+
+        etapasHtml+
       '</div>';
     }).join("");
 
-    var alertHtml = "";
-    if (pendDocs > 0) alertHtml += '<div style="background:rgba(186,117,23,0.12);border:1px solid rgba(239,159,39,0.25);border-radius:8px;padding:9px 14px;font-size:12px;color:#EF9F27;display:flex;align-items:center;gap:7px;font-weight:500;margin-bottom:10px"><div style="width:5px;height:5px;border-radius:50%;background:#EF9F27;flex-shrink:0"></div>Existem documentos pendentes que precisam ser enviados.</div>';
-    if (hasDelayed)  alertHtml += '<div style="background:rgba(226,75,74,0.12);border:1px solid rgba(240,149,149,0.25);border-radius:8px;padding:9px 14px;font-size:12px;color:#F09595;display:flex;align-items:center;gap:7px;font-weight:500;margin-bottom:10px"><div style="width:5px;height:5px;border-radius:50%;background:#E24B4A;flex-shrink:0"></div>Existem itens em atraso que precisam de atenção.</div>';
+    var alertHtml="";
+    if (pendDocs>0) alertHtml+='<div class="alert-warn"><div style="width:5px;height:5px;border-radius:50%;background:#EF9F27;flex-shrink:0"></div>Existem documentos pendentes que precisam ser enviados.</div>';
+    if (hasDelayed)  alertHtml+='<div class="alert-danger"><div style="width:5px;height:5px;border-radius:50%;background:#E24B4A;flex-shrink:0"></div>Existem itens em atraso que precisam de atenção.</div>';
 
-    content.innerHTML =
-      '<div class="cron-hero">' +
-        '<div class="cron-hero-circle" style="width:380px;height:380px;top:-180px;right:-80px"></div>' +
-        '<div class="cron-hero-circle" style="width:180px;height:180px;bottom:-90px;left:-40px"></div>' +
-        '<div style="position:absolute;top:24px;right:220px;width:4px;height:4px;border-radius:50%;background:rgba(204,214,80,0.25)"></div>' +
-        '<div class="cron-hero-grid">' +
-          '<div>' +
-            '<div class="cron-eyebrow"><div class="cron-eyebrow-line"></div>Cronograma de execução</div>' +
-            '<div class="cron-anobase">Ano-base <span>' + cliente.ano_base + '</span></div>' +
-            '<div class="cron-desc">Acompanhamento do projeto | ' + parceiroNome + '</div>' +
-          '</div>' +
-          '<div class="mcti-card">' +
-            '<div class="mcti-eye">Status MCTI</div>' +
-            '<div class="mcti-dot-row"><div class="mcti-dot" style="background:' + ms.dot + '"></div></div>' +
-            '<div class="mcti-val">' + ms.label + '</div>' +
-            '<div class="mcti-hint">Ano-base ' + cliente.ano_base + '</div>' +
-          '</div>' +
-        '</div>' +
-      '</div>' +
-      '<div class="stats-bar"><div class="stats-inner">' +
-        '<div class="stat"><div class="stat-line" style="background:#CCD650"></div><div class="stat-lbl">Progresso</div><div class="stat-val">' + pct + '%</div><div class="stat-sub">' + doneAtiv + ' de ' + totalAtiv + ' atividades</div></div>' +
-        '<div class="stat"><div class="stat-line" style="background:#378ADD"></div><div class="stat-lbl">Etapas concluídas</div><div class="stat-val">' + doneStages + '</div><div class="stat-sub">de ' + etapas.length + ' etapas</div></div>' +
-        '<div class="stat"><div class="stat-line" style="background:#BA7517"></div><div class="stat-lbl">Docs pendentes</div><div class="stat-val" style="color:#EF9F27">' + pendDocs + '</div><div class="stat-sub">documentos aguardados</div></div>' +
-        '<div class="stat"><div class="stat-line" style="background:#0F6E56"></div><div class="stat-lbl">Em andamento</div><div class="stat-val" style="color:#5DCAA5">' + emAndamento + '</div><div class="stat-sub">etapa ativa</div></div>' +
-      '</div></div>' +
-      '<div class="prog-bar"><div class="prog-lbl">Progresso geral</div><div class="prog-track"><div class="prog-fill" style="width:' + pct + '%"></div></div><div class="prog-pct">' + pct + '%</div></div>' +
-      '<div class="cron-content">' + alertHtml + gruposHtml + '</div>';
+    content.innerHTML=
+      '<div class="hero-section">'+
+        '<div class="hero-circle" style="width:380px;height:380px;top:-180px;right:-80px"></div>'+
+        '<div class="hero-circle" style="width:180px;height:180px;bottom:-90px;left:-40px"></div>'+
+        '<div style="position:absolute;top:24px;right:220px;width:4px;height:4px;border-radius:50%;background:rgba(204,214,80,0.25);z-index:1"></div>'+
+        '<div class="cron-hero-grid">'+
+          '<div>'+
+            '<div class="hero-eyebrow"><div class="hero-eyebrow-line"></div>Cronograma de execução</div>'+
+            '<div class="cron-anobase">Ano-base <span>'+cliente.ano_base+'</span></div>'+
+            '<div class="cron-desc">Acompanhamento do projeto | '+parceiroNome+'</div>'+
+          '</div>'+
+          '<div class="mcti-card">'+
+            '<div class="mcti-eye">Status MCTI</div>'+
+            '<div class="mcti-dot-row"><div class="mcti-dot" style="background:'+ms.dot+'"></div></div>'+
+            '<div class="mcti-val">'+ms.label+'</div>'+
+            '<div class="mcti-hint">'+ms.hint+'</div>'+
+          '</div>'+
+        '</div>'+
+      '</div>'+
+      '<div class="stats-bar"><div class="stats-inner">'+
+        '<div class="stat"><div class="stat-line" style="background:#CCD650"></div><div class="stat-lbl">Progresso</div><div class="stat-val">'+pct+'%</div><div class="stat-sub">'+doneAtiv+' de '+totalAtiv+' atividades</div></div>'+
+        '<div class="stat"><div class="stat-line" style="background:#378ADD"></div><div class="stat-lbl">Etapas concluídas</div><div class="stat-val">'+doneStages+'</div><div class="stat-sub">de '+etapas.length+' etapas</div></div>'+
+        '<div class="stat"><div class="stat-line" style="background:#BA7517"></div><div class="stat-lbl">Docs pendentes</div><div class="stat-val" style="color:#EF9F27">'+pendDocs+'</div><div class="stat-sub">documentos aguardados</div></div>'+
+        '<div class="stat"><div class="stat-line" style="background:#0F6E56"></div><div class="stat-lbl">Em andamento</div><div class="stat-val" style="color:#5DCAA5">'+emAnd+'</div><div class="stat-sub">etapa ativa</div></div>'+
+      '</div></div>'+
+      '<div class="prog-bar"><div class="prog-lbl">Progresso geral</div><div class="prog-track"><div class="prog-fill" style="width:'+pct+'%"></div></div><div class="prog-pct">'+pct+'%</div></div>'+
+      '<div class="cron-content">'+(alertHtml?'<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:8px">'+alertHtml+'</div>':'')+gruposHtml+'</div>';
 
-  } catch(e) {
-    content.innerHTML = '<div class="error-box">Erro ao carregar cronograma: ' + e.message + '</div>';
+  } catch(e){
+    content.innerHTML='<div class="error-box">Erro ao carregar cronograma: '+e.message+'</div>';
   }
 }
 
 loadParceiroInfo();
-
-// Restaura sessão ao recarregar a página
-if (accessToken && todosClientes.length) {
-  document.getElementById("auth-screen").style.display = "none";
+if (accessToken&&todosClientes.length) {
+  document.getElementById("auth-screen").style.display="none";
   showHistorico();
 }
 </script>
