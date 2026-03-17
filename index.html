@@ -292,7 +292,7 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
 </div>
 
 <script>
-const SUPABASE_URL  = "https://ywckzclxdbhlbgqpmtvc.supabase.co"";
+const SUPABASE_URL  = "https://ywckzclxdbhlbgqpmtvc.supabase.co";
 const SUPABASE_KEY  = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl3Y2t6Y2x4ZGJobGJncXBtdHZjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM2NzgwNTksImV4cCI6MjA4OTI1NDA1OX0.Cfxbis5sgn2pT7mnULlEfqW1In1OmDBxUUTHsP3H3Og";
 const PARCEIRO_SLUG = "global-innovation";
 
@@ -606,10 +606,10 @@ async function loadCronograma(clienteSlug) {
             '<div class="etapa-right">'+
               '<div class="etapa-date">'+etapa.periodo+'</div>'+
               '<div class="etapa-badge" style="background:'+scv.bg+';color:'+scv.text+'">'+scv.label+'</div>'+
-              '<div class="etapa-arrow'+(autoOpen?" open":"''")+('"')+(autoOpen?" open":"")+('" id="eca-'+etapa.id+'">▼</div>')+
+              '<div class="etapa-arrow'+(autoOpen?" open":"")+'" id="eca-'+etapa.id+'">▼</div>'+
             '</div>'+
           '</div>'+
-          '<div class="etapa-body'+(autoOpen?" open":"''")+('" id="ecb-'+etapa.id+'">'+bodyContent+'</div>')+
+          '<div class="etapa-body'+(autoOpen?" open":"")+'" id="ecb-'+etapa.id+'">'+bodyContent+'</div>'+
         '</div>';
       }).join("");
 
