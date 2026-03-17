@@ -60,24 +60,24 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
 .auth-footer span{font-size:11px;color:rgba(204,214,80,0.45);font-weight:600}
 
 /* HERO */
-.hero-section{background:var(--dcarli-dark);padding:2rem 2rem 2.5rem;position:relative;overflow:hidden}
+.hero-section{background:var(--dcarli-dark);padding:1.5rem 2rem 2rem;position:relative;overflow:hidden}
 .hero-circle{position:absolute;border-radius:50%;border:1px solid rgba(204,214,80,0.07)}
-.hero-inner{position:relative;z-index:1}
-.hero-eyebrow{font-size:10px;font-weight:700;color:rgba(204,214,80,0.6);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.hero-inner{position:relative;z-index:1;text-align:center}
+.hero-eyebrow{font-size:10px;font-weight:700;color:rgba(204,214,80,0.6);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;display:flex;align-items:center;justify-content:center;gap:6px}
 .hero-eyebrow-line{width:20px;height:1px;background:rgba(204,214,80,0.3)}
-.hero-name{font-size:36px;font-weight:700;color:#fff;letter-spacing:-1px;line-height:1;margin-bottom:6px}
-.hero-since{font-size:13px;color:rgba(255,255,255,0.35);font-weight:500}
+.hero-name{font-size:28px;font-weight:700;color:#fff;letter-spacing:-1px;line-height:1;margin-bottom:5px}
+.hero-since{font-size:12px;color:rgba(255,255,255,0.35);font-weight:500}
 .hero-since strong{color:rgba(204,214,80,0.6);font-weight:700}
 .cron-hero-grid{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;position:relative;z-index:1}
-.cron-anobase{font-size:36px;font-weight:700;color:#fff;letter-spacing:-1px;line-height:1;margin-bottom:8px}
+.cron-anobase{font-size:32px;font-weight:700;color:#fff;letter-spacing:-1px;line-height:1;margin-bottom:6px}
 .cron-anobase span{color:var(--dcarli)}
-.cron-desc{font-size:13px;color:rgba(255,255,255,0.35);font-weight:500}
-.mcti-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 18px;text-align:right;min-width:190px}
-.mcti-eye{font-size:9px;font-weight:700;color:rgba(204,214,80,0.45);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.cron-desc{font-size:12px;color:rgba(255,255,255,0.35);font-weight:500}
+.mcti-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:12px 16px;text-align:right;min-width:170px}
+.mcti-eye{font-size:9px;font-weight:700;color:rgba(204,214,80,0.45);text-transform:uppercase;letter-spacing:1px;margin-bottom:5px}
 .mcti-dot-row{display:flex;align-items:center;justify-content:flex-end;gap:5px;margin-bottom:3px}
-.mcti-dot{width:7px;height:7px;border-radius:50%}
-.mcti-val{font-size:15px;font-weight:700;color:#fff}
-.mcti-hint{font-size:10px;color:rgba(255,255,255,0.25);margin-top:3px}
+.mcti-dot{width:6px;height:6px;border-radius:50%}
+.mcti-val{font-size:13px;font-weight:700;color:#fff}
+.mcti-hint{font-size:10px;color:rgba(255,255,255,0.25);margin-top:2px}
 
 /* STATS */
 .stats-bar{background:var(--stats-bg);border-bottom:1px solid var(--stats-border)}
@@ -94,12 +94,14 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
 .prog-pct{font-size:12px;font-weight:700;color:var(--dcarli-text);white-space:nowrap}
 
 /* HISTÓRICO */
-.hist-totals{background:var(--stats-bg);border-bottom:1px solid var(--stats-border);display:grid;grid-template-columns:1fr 1fr;border-left:1px solid var(--stats-border)}
-.hist-total{padding:14px 2rem;border-right:1px solid var(--stats-border);position:relative}
+.hist-totals{background:var(--stats-bg);border-bottom:1px solid var(--stats-border);display:flex;justify-content:center;gap:0;padding:0}
+.hist-totals-inner{display:flex;gap:0;border:1px solid var(--stats-border);border-radius:var(--radius);overflow:hidden;margin:12px auto;max-width:480px;width:100%}
+.hist-total{padding:10px 20px;border-right:1px solid var(--stats-border);position:relative;flex:1;text-align:center}
+.hist-total:last-child{border-right:none}
 .hist-total-line{position:absolute;top:0;left:0;right:0;height:3px}
-.hist-total-lbl{font-size:9px;font-weight:700;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px}
-.hist-total-val{font-size:24px;font-weight:700;letter-spacing:-.5px;line-height:1}
-.hist-total-sub{font-size:10px;color:rgba(255,255,255,0.25);margin-top:3px;font-weight:500}
+.hist-total-lbl{font-size:9px;font-weight:700;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
+.hist-total-val{font-size:18px;font-weight:700;letter-spacing:-.5px;line-height:1}
+.hist-total-sub{font-size:9px;color:rgba(255,255,255,0.2);margin-top:2px;font-weight:500}
 
 /* GRÁFICO */
 .chart-section{padding:1rem 2rem 1.25rem;background:var(--stats-bg);border-bottom:1px solid var(--stats-border)}
@@ -115,14 +117,24 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
 .cti-value{font-size:11px;font-weight:700}
 
 /* SELEÇÃO ANO */
-.hist-select-section{padding:1rem 2rem 1.5rem;background:var(--stats-bg)}
-.hist-select-title{font-size:11px;font-weight:700;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.hist-select-section{padding:.75rem 2rem 1.25rem;background:var(--stats-bg)}
+.hist-select-title{font-size:11px;font-weight:700;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px;display:flex;align-items:center;gap:8px}
 .hist-select-line{flex:1;height:1px;background:rgba(255,255,255,0.08)}
-.year-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
-.year-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px;text-align:center;cursor:pointer;transition:all .2s}
+.year-grid{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.year-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:8px 16px;text-align:center;cursor:pointer;transition:all .2s;min-width:100px}
 .year-card:hover{border-color:rgba(204,214,80,0.3);background:#212618}
-.yc-label{font-size:9px;font-weight:700;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px}
-.yc-year{font-size:24px;font-weight:700;color:#fff;letter-spacing:-.5px}
+.yc-label{font-size:9px;font-weight:700;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:.6px;margin-bottom:2px}
+.yc-year{font-size:18px;font-weight:700;color:#fff;letter-spacing:-.5px}
+/* DROPDOWN CHIP */
+.t-chip-wrap{position:relative}
+.t-chip{background:rgba(204,214,80,0.12);border:1px solid rgba(204,214,80,0.25);color:var(--dcarli);font-size:10px;font-weight:700;padding:4px 10px;border-radius:99px;cursor:pointer;user-select:none;display:flex;align-items:center;gap:5px}
+.t-chip:hover{background:rgba(204,214,80,0.2)}
+.t-chip-arrow{font-size:8px;opacity:.7}
+.t-dropdown{position:absolute;top:calc(100% + 6px);right:0;background:#1a1f0e;border:1px solid rgba(204,214,80,0.2);border-radius:8px;overflow:hidden;min-width:130px;z-index:200;display:none;flex-direction:column}
+.t-dropdown.open{display:flex}
+.t-dropdown-item{padding:8px 14px;font-size:11px;font-weight:600;color:rgba(255,255,255,0.7);cursor:pointer;transition:background .15s;white-space:nowrap}
+.t-dropdown-item:hover{background:rgba(204,214,80,0.1);color:#fff}
+.t-dropdown-item.current{color:var(--dcarli);background:rgba(204,214,80,0.08)}
 .yc-status{font-size:9px;font-weight:700;padding:2px 8px;border-radius:99px;display:inline-block;margin-top:6px}
 
 /* CRONOGRAMA */
@@ -267,7 +279,13 @@ body{background:var(--bg);color:#fff;min-height:100vh;font-family:'Quicksand',sa
       <div><div class="t-name" id="cron-t-name">Carregando...</div><div class="t-sub" id="cron-t-sub">Lei do Bem</div></div>
     </div>
     <div class="t-right">
-      <div class="t-chip" id="cron-t-chip"></div>
+      <div class="t-chip-wrap" id="cron-chip-wrap">
+        <div class="t-chip" id="cron-t-chip" onclick="toggleChipDropdown()">
+          <span id="cron-chip-label"></span>
+          <span class="t-chip-arrow">▼</span>
+        </div>
+        <div class="t-dropdown" id="cron-chip-dropdown"></div>
+      </div>
       <button class="t-btn" id="cron-back-btn" onclick="goBack()" style="display:none">Histórico</button>
       <button class="t-btn" onclick="doLogout()">Sair</button>
     </div>
@@ -291,7 +309,37 @@ var histChart     = null;
 var histMode      = "disp";
 var histData      = null;
 
-var GRUPOS = {
+var currentClienteSlug = null;
+
+function toggleChipDropdown(){
+  var dd=document.getElementById("cron-chip-dropdown");
+  if(dd) dd.classList.toggle("open");
+}
+
+function buildChipDropdown(clientes, currentSlug){
+  var dd=document.getElementById("cron-chip-dropdown");
+  if(!dd) return;
+  dd.innerHTML=clientes.map(function(c){
+    var isCurrent=c.slug===currentSlug;
+    return '<div class="t-dropdown-item'+(isCurrent?" current":"")+'" onclick="chipSelectAno(\''+c.slug+'\')">'+
+      'Ano-base '+c.ano_base+(isCurrent?' ✓':'')+
+    '</div>';
+  }).join("");
+}
+
+function chipSelectAno(slug){
+  var dd=document.getElementById("cron-chip-dropdown");
+  if(dd) dd.classList.remove("open");
+  if(slug!==currentClienteSlug) loadCronograma(slug);
+}
+
+document.addEventListener("click",function(e){
+  var wrap=document.getElementById("cron-chip-wrap");
+  if(wrap&&!wrap.contains(e.target)){
+    var dd=document.getElementById("cron-chip-dropdown");
+    if(dd) dd.classList.remove("open");
+  }
+});
   contabil:{label:"Escopo Contábil",sub:"Apuração de dispêndios",cor:"#85B7EB",corBg:"rgba(24,95,165,0.2)",fill:"#378ADD",
     icon:'<svg width="14" height="14" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="2" stroke="#85B7EB" stroke-width="1.5"/><path d="M5 9h8M5 6h8M5 12h5" stroke="#85B7EB" stroke-width="1.2" stroke-linecap="round"/></svg>'},
   tecnico:{label:"Escopo Técnico",sub:"Coleta e elaboração do relatório",cor:"#5DCAA5",corBg:"rgba(15,110,86,0.2)",fill:"#1D9E75",
@@ -566,8 +614,10 @@ async function showHistorico(){
         '</div>'+
       '</div>'+
       '<div class="hist-totals">'+
-        '<div class="hist-total"><div class="hist-total-line" style="background:rgba(55,138,221,0.6)"></div><div class="hist-total-lbl">Dispêndio total com P&amp;D</div><div class="hist-total-val" style="color:#85B7EB">'+fmt(totalD)+'</div><div class="hist-total-sub">Acumulado '+anoIni+'–'+anoFim+'</div></div>'+
-        '<div class="hist-total"><div class="hist-total-line" style="background:#CCD650"></div><div class="hist-total-lbl">Benefício total gerado</div><div class="hist-total-val" style="color:#CCD650">'+fmt(totalB)+'</div><div class="hist-total-sub">Dedução fiscal acumulada</div></div>'+
+        '<div class="hist-totals-inner">'+
+          '<div class="hist-total"><div class="hist-total-line" style="background:rgba(55,138,221,0.6)"></div><div class="hist-total-lbl">Dispêndio P&amp;D</div><div class="hist-total-val" style="color:#85B7EB">'+fmt(totalD)+'</div><div class="hist-total-sub">'+anoIni+'–'+anoFim+'</div></div>'+
+          '<div class="hist-total"><div class="hist-total-line" style="background:#CCD650"></div><div class="hist-total-lbl">Benefício gerado</div><div class="hist-total-val" style="color:#CCD650">'+fmt(totalB)+'</div><div class="hist-total-sub">Dedução fiscal</div></div>'+
+        '</div>'+
       '</div>'+
       '<div class="chart-section">'+
         '<div class="chart-header">'+
@@ -612,11 +662,21 @@ async function loadCronograma(clienteSlug){
     var cliente=clienteArr[0];
     if(!cliente) throw new Error("Cliente não encontrado.");
     var logoUrl=cliente.logo_url||clienteLogoUrl;
+    currentClienteSlug=clienteSlug;
     document.getElementById("cron-t-name").textContent=cliente.nome;
     document.getElementById("cron-t-sub").textContent="Lei do Bem "+cliente.ano_base;
-    document.getElementById("cron-t-chip").textContent="Ano-base "+cliente.ano_base;
+    document.getElementById("cron-chip-label").textContent="Ano-base "+cliente.ano_base;
     document.title=cliente.nome+" | Lei do Bem "+cliente.ano_base;
     setLogo("cron-logo-card",logoUrl);
+    // Build dropdown com todos os anos disponíveis
+    var slugList2=todosClientes.join(",");
+    fetchJSON("/rest/v1/clientes?slug=in.("+slugList2+")&select=nome,slug,ano_base",accessToken).then(function(cl){
+      cl.sort(function(a,b){return b.ano_base-a.ano_base;});
+      buildChipDropdown(cl,clienteSlug);
+      // Oculta dropdown se só tem um ano
+      var wrap=document.getElementById("cron-chip-wrap");
+      if(wrap) wrap.style.display=cl.length>1?"block":"none";
+    }).catch(function(){});
     var mctiStatus=statusArr.length?statusArr[0].status:"nao_enviado";
     var ms=MCTI_STATUS[mctiStatus]||MCTI_STATUS["nao_enviado"];
     var atividades=itens.filter(function(i){return i.tipo==="atividade";});
